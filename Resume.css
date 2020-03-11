@@ -234,6 +234,7 @@ li a:hover:not(.active) {
 .pnd,
 .skill,
 h3 {
+    text-decoration:underline;
     text-align: center;
     padding-top: 150px;
     font-family: 'Pacifico';
