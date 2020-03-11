@@ -110,9 +110,9 @@ li a:hover:not(.active) {
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
     padding: 15px;
-    border-right: 20px solid rgb(241, 220, 195);
-    border-left: 20px solid rgb(241, 220, 195);
-    border-top: 20px solid rgb(241, 220, 195);
+    border-right: 20px solid #D5C9B1;
+    border-left: 20px solid #D5C9B1;
+    border-top: 20px solid #D5C9B1;
     background-color: rgb(6, 19, 46);
     padding-top: 60px;
     padding-bottom: 0px;
