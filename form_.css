@@ -1,0 +1,135 @@
+.container {
+    margin-top: 50px;
+    margin: 320px auto;
+    margin-bottom: 300 px;
+    font-family: sans-serif;
+    width: 300px;
+    background: rgb(53, 53, 53);
+    padding: 30px 20px;
+}
+
+.input {
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(255, 254, 166);
+    padding-bottom: 30px;
+    font-size: 23px;
+}
+
+.tulisan {
+    padding-top: 220px;
+    color: white;
+    padding-left: 200px;
+    font-size: 55px;
+    font-family: 'Tangerine', cursive;
+}
+
+.container.form {
+    font-size: 100px;
+}
+
+body {
+    background-color: rgb(241, 220, 195);
+    background-image: url("bgfix.jpg");
+    background-size: 1500px 555px;
+    background-repeat: no-repeat;
+    padding-right: 20px;
+}
+
+* {
+    margin: 0px;
+}
+
+ul {
+    padding: 0px;
+    width: 100%;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: rgb(34, 33, 32);
+    position: fixed;
+    height: 55px;
+}
+
+li {
+    float: left;
+    margin-left: 20px;
+}
+
+li a {
+    margin-top: 0px;
+    display: block;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 19px;
+    text-decoration: none;
+    top: 0;
+    left: 0;
+}
+
+li a:hover:not(.active) {
+    background-color: rgb(53, 53, 52);
+}
+
+.active {
+    background-color: rgb(105, 78, 53);
+}
+
+label {
+    font-size: 13pt;
+    font-family: sans-serif;
+    text-align: center;
+    padding-left: 120px;
+    color: rgb(255, 254, 166);
+}
+
+.form_nilai {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    font-size: 11pt;
+    margin-bottom: 20px;
+    background: rgb(233, 233, 220);
+    border-color: rgb(233, 233, 220);
+    border-radius: 3px;
+}
+
+.tombolHitung {
+    background: rgb(203, 243, 95);
+    color: rgb(17, 17, 17);
+    font-size: 15pt;
+    font-weight: bold;
+    width: 48%;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+
+.tombolReset {
+    float: right;
+    background: rgb(203, 243, 95);
+    color: rgb(17, 17, 17);
+    font-size: 15pt;
+    font-weight: bold;
+    width: 48%;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+
+.hitung {
+    padding-top: 50px;
+    padding-left: 0px;
+    color: rgb(255, 254, 166);
+    font-size: 18px;
+}
+
+.form_hasil {
+    height: 24px;
+    background: rgb(53, 53, 53);
+    border: none;
+    color: rgb(203, 243, 95);
+    font-size: 16px;
+}
