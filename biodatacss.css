@@ -1,10 +1,56 @@
+* {
+    margin: 0px;
+}
+
+ul {
+    padding: 0px;
+    width: 100%;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #EED8C9;
+    position: fixed;
+    height: 52px;
+    opacity: 0.8;
+}
+
+li {
+    float: left;
+    margin-left: 20px;
+    height: 55px;
+}
+
+li a {
+    margin-top: 0px;
+    display: block;
+    padding: 15px;
+    color: rgb(77, 77, 72);
+    font-weight: bold;
+    font-size: 19px;
+    text-decoration: none;
+    top: 0;
+    left: 0;
+}
+
+li a:hover:not(.active) {
+    background-color: #E99787;
+}
+
+.active {
+    background-color: #E99787;
+}
+
+.isi {
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
 h1 {
     text-align: center;
     margin: auto;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding-top: 60px;
+    padding-top: 90px;
     font-size: 50px;
-    color: rgb(15, 50, 80);
+    color: rgb(54, 49, 45);
     padding-bottom: 25px;
     padding-bottom: 50px;
 }
@@ -18,13 +64,11 @@ img {
 }
 
 body {
-    background-color: rgb(219, 203, 150);
-    padding-left: 150px;
-    padding-right: 150px;
+    background-color: #D5C9B1;
 }
 
 .foto {
-    background-color: rgb(219, 203, 150);
+    background-color: #D5C9B1;
     padding-top: 0px;
     margin: auto;
     width: 155px;
@@ -32,7 +76,8 @@ body {
 }
 
 .nama {
-    background-color: rgb(219, 203, 150);
+    background-color: #D5C9B1;
+    color: rgb(54, 49, 45);
     margin: auto;
     text-align: center;
     padding-top: 0px;
@@ -46,7 +91,7 @@ table {
 .pend,
 .pelt,
 .organ {
-    background-color: rgb(17, 45, 49);
+    background-color: rgb(56, 54, 50);
 }
 
 table,
@@ -68,15 +113,16 @@ td {
 }
 
 table tr:nth-child(even) {
-    background-color: rgb(119, 167, 57);
+    background-color: #a49592;
 }
 
 table tr:nth-child(odd) {
-    background-color: rgb(236, 230, 216);
+    background-color: #727077;
+    color: rgb(255, 255, 255);
 }
 
 table th {
-    background-color: rgb(20, 70, 70);
+    background-color: rgb(63, 52, 55);
     color: white;
 }
 
@@ -85,10 +131,12 @@ p {
 }
 
 hr {
+    margin-top: 30px;
+    margin-bottom: 35px;
     float: left;
-    border-color: olive;
+    border-color: rgb(161, 120, 120);
     height: 4px;
     width: 100%;
-    color: midnightblue;
-    background-color: olive;
+    color: rgb(179, 176, 174);
+    background-color: rgb(161, 120, 120);
 }
