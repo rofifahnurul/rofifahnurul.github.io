@@ -225,10 +225,10 @@ li a:hover:not(.active) {
 
 .tulisan {
     color: white;
-    padding-right: 80px;
+    padding-right: 40px;
     text-align: center;
     font-size: 55px;
-    font-family: 'Tangerine', cursive;
+    font-family: sans-serif;
 }
 
 .pnd,
