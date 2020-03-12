@@ -94,8 +94,9 @@ li a:hover:not(.active) {
     padding-bottom: 0px;
 }
 .task2{
+    text-align:center;
     font-family:sans-serif;
-    font-size:35px;
+    font-size:25px;
     color:rgb(90, 79, 68);}
 
 
