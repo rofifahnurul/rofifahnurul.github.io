@@ -470,7 +470,6 @@ section {
 
 #footer {
     color: #fff;
-    font-size: 14px;
     position: relative;
     text-align: center;
 }
@@ -498,6 +497,10 @@ section {
     position: relative;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+#footer h5 {
+    font-size: 19px;
 }
 
 #footer h4 {
