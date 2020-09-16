@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task 2 TBO</title>
+
+    <link href="assets/js-tambahan/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/js-tambahan/icofont/icofont.min.css" rel="stylesheet">
+    <link href="assets/js-tambahan/venobox/venobox.css" rel="stylesheet">
+    <link href="assets/js-tambahan/aos/aos.css" rel="stylesheet">
+    <link href="assets/css/task2.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Tangerine&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header id="header">
+        <header id="header">
+            <div class="container d-flex">
+                <nav class="nav-menu d-none d-lg-block">
+                    <ul>
+                        <li><a href="">TBO</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="task1.html">Task 1</a></li>
+                        <li class="active"><a href="task2.html">Task 2</a></li>
+
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </header>
+
+    <section id="hero">
+        <div class="hero-container" data-aos="fade-up">
+            <h1>Task 2</h1>
+            <h2>Artikel untuk memenuhi tugas 2 mata kuliah Teori Bahasa dan Otomata</h2>
+            <a href="#what" class="btn-get-started scrollto">Read More</a>
+        </div>
+    </section>
+
+    <main id="main">
+        <hr>
+        <section id="what" class="what">
+            <div class="container">
+                <div class="section-title" data-aos="zoom-in">
+                    <h3>Apa Itu <span> Notasi Big O</span>?</h3>
+                    <p>Notasi Big O merupakan cara yang dilakukan untuk mengkonversi algoritma menjadi bentuk aljabar dengan mengabaikan variabel atau konstanta yang tidak terlalu berdampak terhadap keseluruhan. Artinya, kita hanya melihat pada variabel
+                        yang punya pengaruh besar.
+
+                    </p>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section id="fungsi" class="fungsi">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 d-flex justify-content-center align-items-stretch justify-content-center py-5 px-lg-5" data-aos="zoom-in">
+                        <p class="description">
+                            Big O berguna untuk mengetahui apakah suatu algoritma cukup efisien untuk menangani sejumlah besar data. Misalnya untuk suatu aplikasi yang punya data besar, menggunakan analisis dengan Big O dapat membuat aplikasi berjalan lebih cepat dan menggunakan
+                            lebih sedikit memori. Kelebihan dari Big O ini, yaitu kita bisa menggunakannya untuk menghitung efisien dan kompleksitas tanpa harus menjalankan program dengan input langsung dari komputer terlebih dahulu. Selain itu, Big O
+                            juga berguna agar kita dapat mengetahui worst-case dan best case dari algoritma. Mengapa ini penting ? Kembali lagi ke kegunaan awal yaitu untuk efisiensi, maka kita harus memilih best-case dan menghindari worst-case.
+                        </p>
+                    </div>
+                    <div id="atm" class="col-xl-6 col-lg-3 d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+                        <div data-aos="fade-up">
+                            <div class="section-title" data-aos="zoom-in">
+                                <h3>Apa <span>Kegunaan </span> Notasi Big O ?</h3>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+        </section>
+        <hr>
+
+        <section id="ilmu" class="ilmu">
+            <div class="container">
+                <div class="section-title" data-aos="zoom-in">
+                    <h3>Notasi Big O yang Biasa Digunakan</h3>
+                    <p>Sebelum melanjutkan mengenai notasi big O, saya akan memberikan dulu sedikit informasi yang juga berkaitan nantinya dengan big O.
+                    </p>
+                    <p>Big O ini digunakan untuk mengetahui time complexity dan space complexity suatu algoritma. Apa itu time complexity dan space complexity? Singkatnya, time complexity adalah berapa lama waktu running yang dibutuhkan algoritma tersebut.
+                        Sedangkan space complexity adalah berapa banyak space memory yang dibutuhkan algoritma itu.
+                    </p>
+                    <p>Berikut adalah Notasi Big O yang biasanya digunakan : </p>
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-6" data-aos="fade-up">
+                        <div class="box">
+                            <h4>O(1)- Constant </h4>
+                            <p>Artinya algoritma tersebut akan dieksekusi dengan waktu yang sama atau space yang sama tanpa dipengaruhi oleh banyaknya input. </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
+                        <div class="box">
+                            <h4>O(n) — Linear</h4>
+                            <p>Adalah ketika performance dari waktu atau space algoritma tersebut berbanding lurus dengan jumlah input yang diberikan (linear). </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
+                        <div class="box">
+                            <h4>O(n²) — Quadratic</h4>
+                            <p>Merepresentasikan algoritma yang performance waktu atau space nya berbanding lurus dengan kuadrat inputnya. </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
+                        <div class="box">
+                            <h4>O(log n) — Logarithmic</h4>
+                            <p>ketika kita memberikan input sebesar n terhadap sebuah fungsi, jumlah tahapan yang dilakukan oleh fungsi tersebut berkurang berdasarkan suatu faktor.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
+                        <div class="box">
+                            <h4> O(2^n) — Exponential</h4>
+                            <p> Biasanya digunakan dalam situasi dimana kita kurang tahu terhadap permasalahan yang dihadapi, sehingga mengharuskan kita mencoba setiap kombinasi dan permutasi dari semua kemungkinan. Kurva pertumbuhan fungsi ini bersifat eksponensial
+                                - dimulai dari sangat dangkal, kemudian naik secara meteorik.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+
+
+        <section id="example" class="example">
+            <div class="container">
+                <div class="section-title" data-aos="zoom-in">
+                    <h3>Bagaimana <span>contoh penggunaan </span> Big O ?</h3>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 d-flex justify-content-center align-items-stretch" data-aos="zoom-in">
+                        <img src="assets/img/O_1.png" class="img" id="img" alt="Contoh O(1)">
+                    </div>
+
+                    <div id="atm" class="col-xl-6 col-lg-6 d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
+                        <div data-aos="fade-up">
+                            <h4 class="title"><a href="">Contoh 01 </a></h4>
+                            <p class="description">
+                                Berdasarkan potongan kode di samping, dapat dilihat bahwa time complexitynya = O(1) dan space complexitynya juga = O(1).
+                            </p>
+                            <p class="description"> Mengapa? Karena waktu eksekusinya dan space yang dibutuhkan tidak bergantung dengan banyaknya jumlah input. Terlihat ada 8 nilai input yang disimpan di array. Lalu terdapat fungsi ambilNilai yang mengembalikan elemen pertama
+                                dari parameter input. Tetapi, walaupun jumlah inputnya nanti bertambah maka fungsi akan tetap mereturn 1 nilai yaitu nilai pertama di inputnya. Sehingga, walaupun nilai input bertambah, maka waktu eksekusi dan space yang
+                                dibutuhkan tetap karena fungsi hanya mereturn 1 nilai.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div id="vending" class="col-xl-6 col-lg-6 d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5 ">
+                        <div data-aos="fade-up">
+                            <h4 class="title"><a href="">Contoh 02</a></h4>
+                            <p class="description">Berdasarkan potongan kode di samping, dilihat bahwa time complexitynya yaitu = O(n).
+                            </p>
+                            <p class="description">Mengapa demikian? Karena jika nantinya input bertambah maka jumlah looping di program tersebut juka akan bertambah sehingga waktu eksekusinya juga bertambah. Dapat dilihat juga bahwa loopingnya terjadi mulai i = 0, hingga i
+                                lebih kecil dari panjang input, dari sini bisa terlihat hubungan antara input dan jumlah looping yang terjadi.
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 d-flex justify-content-center align-items-stretch" data-aos="zoom-in">
+                        <img src="assets/img/O_n.png" alt="Gambar contoh 2">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="text-center">
+                    <h5>Rofifah Nurul Annisa | D121181508 | Kelas A </h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container footer-bottom clearfix">
+            <div class="text-center">
+                <h4>Reach Me by :
+                    <a href="mailto:rofifahnurul00@gmail.com"> <img src="assets/img/gmail.png" class="gmail" alt="Gmail"></a>
+                    <a href="https://www.linkedin.com/in/rofifah-nurul-annisa-1608"><img src="assets/img/linkedln.png" class="linkedln" alt="linkedln"></a>
+                </h4>
+
+            </div>
+
+        </div>
+    </footer>
+    <a href="#" class="back-to-top">back to top</a>
+
+    <script src="assets/js-tambahan/jquery/jquery.min.js"></script>
+    <script src="assets/js-tambahan/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js-tambahan/jquery.easing/jquery.easing.min.js"></script>
+    <script src="assets/js-tambahan/jquery-sticky/jquery.sticky.js"></script>
+    <script src="assets/js-tambahan/venobox/venobox.min.js"></script>
+    <script src="assets/js-tambahan/waypoints/jquery.waypoints.min.js"></script>
+    <script src="assets/js-tambahan/counterup/counterup.min.js"></script>
+    <script src="assets/js-tambahan/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/js-tambahan/aos/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>
