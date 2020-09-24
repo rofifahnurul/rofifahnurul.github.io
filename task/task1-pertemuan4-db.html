@@ -78,7 +78,7 @@
             <div class="container">
 
                 <div class="row">
-                    <div class="col-lg-12" data-aos="fade-up">
+                    <div class="col-lg-12 mb-4" data-aos="fade-up">
                         <div class="box">
                             <div class="section-title" data-aos="zoom-in">
                                 <h3>Menghitung Biaya Query</h3>
@@ -124,8 +124,7 @@
 
                                 </div>
                             </div>
-                            <p>Selain kedua operation diatas, ada beberapa operation lainnya yang biasa digunakan untuk menghitung cost dari query seperti duplicate elimination, projection dan set operation (union, intersection). </p>
-
+                            <p>Selain kedua operation diatas, ada beberapa operation lainnya yang biasa digunakan untuk menghitung cost dari query seperti duplicate elimination, projection dan set operation (union, intersection). </p><br><br>
                         </div>
                     </div>
 
@@ -133,7 +132,7 @@
             </div>
 
         </section>
-
+        <hr>
 
         <section id="ilmu" class="ilmu">
             <div class="container">
@@ -144,7 +143,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-12" data-aos="fade-up">
-                        <div class="box">
+                        <div class="box mb-5">
                             <h4>Materialisasi</h4>
                             <p>Dengan metode materialisasi ini, query-query akan dipisahkan/dibagi dulu menjadi query individual. Kemudian, akan dievaluasi querynya dan disimpan di tabel sementara pada memori. Data dari tabel sementara ini, akan digunakan
                                 untuk mengevaluasi query selanjutnya. Tetapi, walaupun terlihat simple, metode ini membutuhkan biaya besar untuk evaluasinya karena pastinya butuh waktu untuk evaluasi dan menuliskan data ke tabel sementara. </p>
@@ -153,8 +152,9 @@
                     <div class="col-lg-12" data-aos="fade-up">
                         <div class="box">
                             <h4>Pipeline</h4>
-                            <p>Di metode ini query akan diproses satu persatu dan hasil nya akan digunakan untuk query berikutnya. Karena itu, di metode ini, tidak lagi disimpan di tabel sementara yang berdampak ke berkurangnya cost. Mengapa ? Karena tidak
-                                ada lagi cost untuk menulis dan mengakses data ke tabel sementara. </p>
+                            <p>Di metode ini, setiap operasi relational dapat dievaluasi secara bersamaan pada pipeline. Jadi, misalkan sebuah query akan dievaluasi terlebih dahulu lalu hasilnya akan digunakan untuk query berikutnya dan begitu seterusnya
+                                dimana hasil evaluasi query sebelumnya, dilanjutkan ke query berikutnya. Karena itu, di metode ini, tidak lagi disimpan di tabel sementara yang berdampak ke berkurangnya cost. Mengapa ? Karena tidak ada lagi cost untuk
+                                menulis dan mengakses data ke tabel sementara. </p>
                         </div>
                     </div>
 
