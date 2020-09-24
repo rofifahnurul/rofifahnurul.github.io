@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Task 2 Basis Data</title>
+    <title>Evaluation Plan</title>
 
     <link href="assets/js-tambahan/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/js-tambahan/icofont/icofont.min.css" rel="stylesheet">
     <link href="assets/js-tambahan/venobox/venobox.css" rel="stylesheet">
     <link href="assets/js-tambahan/aos/aos.css" rel="stylesheet">
-    <link href="assets/css/task1basdat.css" rel="stylesheet">
+    <link href="assets/css/task2basdat.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Pacifico|Tangerine&display=swap" rel="stylesheet">
 </head>
 
@@ -42,82 +42,141 @@
         <hr>
         <section id="ilmu" class="ilmu">
             <div class="container">
+
                 <div class="section-title" data-aos="zoom-in">
-                    <h3>Tentang Evaluation Plan</h3>
-                    <p> Apa itu sebenarnya evaluation plan ? Nah, evaluation plan ini menetapkan detail evaluasi seperti apa saja yang akan dievaluasi dan sebagainya. Nah, evaluation plan di query pada DBMS ini berguna agar optimizer dapat memutuskan nantinya
-                        evaluasi mana yang akan dipilih.
+                    <h3>Tentang <span>Evaluation Plan</span></h3>
+                    <p> Apa itu sebenarnya evaluation plan ? Evaluation plan ini menetapkan detail evaluasi seperti apa saja yang akan dievaluasi dan bagaimana nantinya cara mengevaluasinya. Nah, evaluation plan di query pada DBMS ini berguna agar optimizer
+                        dapat memutuskan nantinya evaluasi mana yang akan dipilih.
                     </p>
                 </div>
 
             </div>
-
         </section>
         <hr>
         <section id="ilmu" class="ilmu">
             <div class="container">
                 <div class="section-title" data-aos="zoom-in">
-                    <h3>Evaluation Plan</h3>
-
+                    <h3>Evaluation Plan <span>di mySQL</span> </h3>
+                    <p>Cara untuk menampilkan Evaluation Plan untuk tiap DBMS berbeda-beda. Kali ini, saya akan mengambil contoh evaluation plan di MySQL. Apa saja yang harus disiapkan dan bagaimana caranya? Berikut keterangannya : </p>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4" data-aos="fade-up">
+                    <div class="col-lg-4 mb-3" data-aos="fade-up">
                         <div class="box">
-                            <h4>id</h4>
-                            <p>Kolom ini berisi identifier dari select</p>
+                            <h3>01</h3>
+                            <h4>Siapkan Database </h4>
+                            <p>Buat terlebih dahulu suatu database, lengkap dengan tabel-tabelnya di mySQL</p>
+                            <br>
                         </div>
                     </div>
-                    <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-lg-4 mb-3" data-aos="fade-up">
                         <div class="box">
-                            <h4>select_type</h4>
-                            <p>Pada contoh ini, isinya yaitu simple. Ini berarti bahwa tipe select yang digunakan keduanya adalah tipe select sederhana bukan gabungan select.</p>
+                            <h3>02</h3>
+                            <h4>Tentukan Perintah Query</h4>
+                            <p>Maksudnya, perintah query apa yang ingin dilakukan dengan tabel itu, contohnya apakah inner join, left join, select atau perintah lainnya</p>
                         </div>
                     </div>
-                    <div class="col-lg-4 mt-4 " data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-lg-4 mb-3" data-aos="fade-up">
                         <div class="box">
-                            <h4>tabel</h4>
+                            <h3>03</h3>
+                            <h4>"EXPLAIN"</h4>
+                            <p>Tambahkan "EXPLAIN" sebelum perintah query yang akan dievaluasi. "EXPLAIN" inilah cara untuk menampilkan evaluation plan di mySQL </p>
                         </div>
                     </div>
-                    <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
-                        <div class="box">
-                            <h4>type</h4>
-                            <p>Di contoh ini, kolomnya berisi all, Jika berisi all artinya pemindaian tabel lengkap dilakukan untuk setiap kombinasi baris dari tabel dataPribadi.</p>
-                        </div>
-                    </div>
+                    <div class="col-lg-12 mb-3" data-aos="fade-up">
 
-                    <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
-                        <div class="box">
-                            <h4>possible_keys</h4>
-                        </div>
-                    </div>
+                        <p>Di bawah ini adalah contoh dari saya mengenai penggunaan explain untuk evaluation plan di mySQL. Sebelumnya, saya telah membuat sebuah database yang berisi 2 tabel, tabel dataPribadi dan tabel dataDepartemen. Di dataPribadi terdapat
+                            kolom <span>id, nama, nim, dan kodeDept.</span> Untuk tabel dataDepartemen terdapat kolom <span>idDept, kodeDept dan namaDept.</span> Lalu, saya ingin menampilkan data setelah melakukan left join. Maka, kodenya di mySQL sebagai
+                            berikut :
+                        </p>
 
-                    <div class="col-lg-4" data-aos="fade-up">
-                        <div class="box">
-                            <h4>key</h4>
-
-                        </div>
-                    </div>
-                    <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
-                        <div class="box">
-                            <h4>key_len</h4>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
-                        <div class="box">
-                            <h4>ref</h4>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
-                        <div class="box">
-                            <h4>ref</h4>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
-                        <div class="box">
-                            <h4>rows</h4>
-                        </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 d-flex justify-content-center align-items-stretch" data-aos="zoom-in">
+                        <img src="assets/img/explain.jpg" class="img" id="img" alt="Gambar ATM">
+                    </div>
+                </div>
+                <h2 data-aos="fade-up">Bagaimana hasil dari perintah query di atas ? Apa saja penjelasan hasilnya ?</h4>
+
+                    <div class="row mb-4">
+                        <div class="col-xl-12 col-lg-12 d-flex justify-content-center align-items-stretch" data-aos="zoom-in">
+                            <img src="assets/img/explainResult.png" class="img" id="img" alt="Gambar ATM">
+                        </div>
+                        <div class="col-lg-4 mt-4" data-aos="fade-up">
+                            <div class="box">
+                                <h4>id</h4>
+                                <p>Kolom ini berisi identifier dari select, untuk contoh ini idnya 1</p>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-8 mt-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="box">
+                                <h4>select_type</h4>
+                                <p>Pada contoh ini, isinya yaitu simple. Ini berarti bahwa tipe select yang digunakan keduanya adalah tipe select sederhana bukan gabungan select.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mt-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="box">
+                                <h4>table</h4>
+                                <p>Kolom ini berisi nama tabel yang digunakan untuk proses query yaitu dataPribadi dan dataDepartemen </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mt-4 " data-aos="fade-up" data-aos-delay="100">
+                            <div class="box">
+                                <h4>type</h4>
+                                <p>Kolom type berisi all, yang artinya pemindaian tabel lengkap dilakukan untuk setiap kombinasi baris dari tabel.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 mt-4 " data-aos="fade-up" data-aos-delay="200">
+                            <div class="box">
+                                <h4>possible_keys</h4>
+                                <p>Di kolom ini, berisi null artinya tidak ada indeks dari kedua tabel yang dapat membantu query </p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 mt-4" data-aos="fade-up">
+                            <div class="box">
+                                <h4>key</h4>
+                                <p>Di kolom pada contoh diatas berisi null artinya tidak ada key yang digunakan.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 mt-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="box">
+                                <h4>key_len</h4>
+                                <p>Di kolom ini harusnya berisi panjang key yang digunakan. Tetapi karena tidak ada key yang digunakan maka menghasilkan null</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-5 mt-4" data-aos="fade-up" data-aos-delay="200">
+                            <div class="box">
+                                <h4>ref</h4>
+                                <p>Di kolom ini seharusnya menampilkan nama kolom dari tabel yang diproses dengan key. Tetapi, untuk contoh ini tidak ada key yang dignakan sehingga kolom ref juga berisi null.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 mt-4 " data-aos="fade-up" data-aos-delay="200">
+                            <div class="box">
+                                <h4>rows</h4>
+                                <p>Kolom rows ini berisi jumlah baris di tabel itu yang harus diperhatikan untuk mengeksekusi query. Untuk tabel dataPribadi berisi angka 3, artinya ada 3 baris yang dicek untuk memproses query ini. Di tabel dataMahasiswa,
+                                    berisi 2 artinya ada 2 baris yang dicek untuk proses query ini </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 mt-4 " data-aos="fade-up" data-aos-delay="200">
+                            <div class="box">
+                                <h4>extra</h4>
+                                <p>Kolom ini berisi informasi tambahan bagaimana mySql akan mengeksekusi query. Dari contoh diatas, untuk tabel dataPribadi, tertulis using temporary dan using filesort. Ini artinya, untuk mengeksekusi query di tabel ini,
+                                    mySql harus membuat suatu tabel sementara dan nanti akan melakukan proses tambahan yaitu sorting untuk mengambil baris dalam urutan yang diurutkan. Untuk tabel dataDepartemen, berisi using where dan using join buffer
+                                    (flat, BNL, join). Using where artinya untuk mengeksekusi tabel dataDepartemen mmysql menggunakan where. Using join buffer (flat, BNL, join) artinya karena tabel ini merupakan outer table dan memerlukan buffer, BNL
+                                    ini berarti algoritma join yang digunakan yaitu Block Nested-Loop. </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <h2 data-aos="fade-up">Kesimpulan</h2>
+                    <p id="kesimpulan" data-aos="fade-up">Jadi, berdasarkan semua keterangan yang ditampilkan, kita bisa menyimpulkan, bahwa query yang dieksekusi diatas belum optimal. Mengapa ? Alasan pertama yaitu karena tidak adanya key/indeks yang dapat membantu proses querynya. Padahal,
+                        dengan adanya index/key ini dapat memberi manfaat bagi query untuk lebih optimal dan mempercepat proses penentuan lokasi pencarian data. <br>Kedua, yaitu karena pada kolom extra, tertulis using temporary, yang mana mySQL harus
+                        terlebih dahulu membuat sebuah tabel sementara yang memperlambat proses dan using sorting file juga menghambat performance mySQL. <br>Solusi yang bisa kita ambil agar query di mySQL ini lebih optimal, yaitu menggunakan key/indeks
+                        untuk prosesnya dan jika ingin melakukan sorting seperti order by sebaiknya bukan di DBMSnya tetapi di PHPnya saja, karena ini sangat memberatkan kerja database. </p>
             </div>
         </section>
         <hr>
@@ -158,15 +217,10 @@
     <script src="assets/js-tambahan/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="assets/js-tambahan/aos/aos.js"></script>
     <script src="assets/js/main.js"></script>
-
-
-</body>
-
-</html>ript src="assets/js/main.js"></script>
-
-
 </body>
 
 </html>
 
 </html>
+
+</html>rd
