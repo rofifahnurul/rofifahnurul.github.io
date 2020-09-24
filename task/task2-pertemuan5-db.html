@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task 2 Basis Data</title>
+
+    <link href="assets/js-tambahan/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/js-tambahan/icofont/icofont.min.css" rel="stylesheet">
+    <link href="assets/js-tambahan/venobox/venobox.css" rel="stylesheet">
+    <link href="assets/js-tambahan/aos/aos.css" rel="stylesheet">
+    <link href="assets/css/task1basdat.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Tangerine&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header id="header">
+        <div class="container d-flex">
+            <nav class="nav-menu d-none d-lg-block">
+                <ul>
+                    <li><a href="">Basis Data</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li class=""><a href="task1-pertemuan4-db.html">Task 1</a></li>
+                    <li class="active"><a href="task2-pertemuan5-db.html">Task 2</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="hero-container" data-aos="fade-up">
+            <h1>Evaluation Plan</h1>
+
+            <a href="#ilmu" class="btn-get-started scrollto">Read More</a>
+        </div>
+    </section>
+
+    <main id="main">
+        <hr>
+        <section id="ilmu" class="ilmu">
+            <div class="container">
+                <div class="section-title" data-aos="zoom-in">
+                    <h3>Tentang Evaluation Plan</h3>
+                    <p> Apa itu sebenarnya evaluation plan ? Nah, evaluation plan ini menetapkan detail evaluasi seperti apa saja yang akan dievaluasi dan sebagainya. Nah, evaluation plan di query pada DBMS ini berguna agar optimizer dapat memutuskan nantinya
+                        evaluasi mana yang akan dipilih.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+        <hr>
+        <section id="ilmu" class="ilmu">
+            <div class="container">
+                <div class="section-title" data-aos="zoom-in">
+                    <h3>Evaluation Plan</h3>
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-4" data-aos="fade-up">
+                        <div class="box">
+                            <h4>id</h4>
+                            <p>Kolom ini berisi identifier dari select</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
+                        <div class="box">
+                            <h4>select_type</h4>
+                            <p>Pada contoh ini, isinya yaitu simple. Ini berarti bahwa tipe select yang digunakan keduanya adalah tipe select sederhana bukan gabungan select.</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mt-4 " data-aos="fade-up" data-aos-delay="100">
+                        <div class="box">
+                            <h4>tabel</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
+                        <div class="box">
+                            <h4>type</h4>
+                            <p>Di contoh ini, kolomnya berisi all, Jika berisi all artinya pemindaian tabel lengkap dilakukan untuk setiap kombinasi baris dari tabel dataPribadi.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
+                        <div class="box">
+                            <h4>possible_keys</h4>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4" data-aos="fade-up">
+                        <div class="box">
+                            <h4>key</h4>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="100">
+                        <div class="box">
+                            <h4>key_len</h4>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
+                        <div class="box">
+                            <h4>ref</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
+                        <div class="box">
+                            <h4>ref</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
+                        <div class="box">
+                            <h4>rows</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+
+        <hr>
+
+    </main>
+
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="text-center">
+                    <h5>Rofifah Nurul Annisa | D121181508 | Kelas A </h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container footer-bottom clearfix">
+            <div class="text-center">
+                <h4>Reach Me by :
+                    <a href="mailto:rofifahnurul00@gmail.com"> <img src="assets/img/gmail.png" class="gmail" alt="Gmail"></a>
+                    <a href="https://www.linkedin.com/in/rofifah-nurul-annisa-1608"><img src="assets/img/linkedln.png" class="linkedln" alt="linkedln"></a>
+                </h4>
+
+            </div>
+
+        </div>
+    </footer>
+    <a href="#" class="back-to-top">back to top</a>
+
+    <script src="assets/js-tambahan/jquery/jquery.min.js"></script>
+    <script src="assets/js-tambahan/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js-tambahan/jquery.easing/jquery.easing.min.js"></script>
+    <script src="assets/js-tambahan/jquery-sticky/jquery.sticky.js"></script>
+    <script src="assets/js-tambahan/venobox/venobox.min.js"></script>
+    <script src="assets/js-tambahan/waypoints/jquery.waypoints.min.js"></script>
+    <script src="assets/js-tambahan/counterup/counterup.min.js"></script>
+    <script src="assets/js-tambahan/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/js-tambahan/aos/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>ript src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>
+
+</html>
