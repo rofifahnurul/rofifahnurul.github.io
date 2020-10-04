@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Desain Database</title>
+
+    <link href="assets/js-tambahan/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/js-tambahan/icofont/icofont.min.css" rel="stylesheet">
+    <link href="assets/js-tambahan/venobox/venobox.css" rel="stylesheet">
+    <link href="assets/js-tambahan/aos/aos.css" rel="stylesheet">
+    <link href="assets/css/task3basdat.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Tangerine&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header id="header">
+        <div class="container d-flex">
+            <nav class="nav-menu d-none d-lg-block">
+                <ul>
+                    <li><a href="">Basis Data</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="task1-pertemuan4-db.html">Task 1</a></li>
+                    <li><a href="task2-pertemuan5-db.html">Task 2</a></li>
+                    <li class="active"><a href="task3-pertemuan6-db.html">Task 3</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="hero-container" data-aos="fade-up">
+            <h1>Proses Desain Database</h1>
+            <p>Berisi proses untuk bagaimana mengolah data, agar data-data yang ada bisa lebih teratur, mudah diolah dan dapat dimengerti.</p>
+
+            <a href="#ilmu" class="btn-get-started scrollto">Read More</a>
+        </div>
+    </section>
+
+    <main id="main">
+        <hr>
+        <section id="ilmu" class="ilmu">
+            <div class="container">
+
+                <div class="section-title" data-aos="zoom-in">
+                    <h3>Tentang <span>Desain Database</span></h3>
+                    <p> Desain database ini penting karena merupakan landasan dari suksesnya suatu sistem informasi. Seperti yang kita ketahui, sistem informasi ini memang sangat berhubungan dengan database. Tujuan dari desain database ini untuk menyediakan
+                        apa saja data yang diperlukan dan bagaimana hubungan antar data itu agar memudahkan dalam mengolah, memahami, membaca data tersebut.
+                    </p>
+
+                </div>
+                <div class="section-title" data-aos="zoom-in">
+                    <h3 id="h3">Apa yang harus diperhatikan dalam desain database?</h3>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 mb-3" data-aos="fade-up">
+                        <div class="box">
+                            <h3>01</h3>
+                            <h4>Integritas Data</h4>
+                            <p>apa itu integritas data? Integritas data ini mengacu kepada kelengkapan, keakuratan dan konsistensi suatu data. Ada beberapa integritas data (Connoly, 2010), seperti Integritas Entitas, Integritas Domain, Integritas Referensial,
+                                dan Integritas General. Contoh integritas data ini, misalkan, di tabel A terdapat foreign key, maka nilai foreign key tersebut harus sama dengan nilai candidate di tabel yang direferensikan dan tidak boleh diubah di tabel
+                                A itu, karena merupakan foreign key. Ini agar data tetap konsisten.</p>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-12 mb-3" data-aos="fade-up">
+                        <div class="box">
+                            <h3>02</h3>
+                            <h4>Menghindari data redundancy dan anomali data.</h4>
+                            <p>Ini masih berkaitan dengan poin sebelumnya, data integrity. Jika data mengalami redundancy atau berulang-ulang, maka ada kemungkinan data tersebut nantinya menjadi tidak konseisten. Misalkan suatu data nama mahasiswa ada di
+                                tabel A dan tabel B, dan tidak memaki kunci foreign key padahal keduanya data yang sama. Maka jika kita mengubah data di tabel A tapi lupa mengubah data di tabel B nantinya datanya akan berbeda padahal sebenarnya keduanya
+                                merupakan data yang sama. Sedangkan, anomali dalam databse merupakan proses pada basis data yang memberikan efek samping yang tidak diharapkan ( misalnya menyebabkan ketidakonsistenan data atau membuat suatu data menjadi
+                                hilang ketika data dihapus)</p>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-3" data-aos="fade-up">
+                        <div class="box">
+                            <h3>03</h3>
+                            <h4>Efisien dalam pengaksesan datanya</h4>
+                            <p>Masih berkaitan dengan poin sebelumnya, data akan efisien untuk diakses jika ada integritas data dan kembali lagi ke tujuan desain database, maka tentunya harus efisien agar mudah diolah dan dipahami.
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-3" data-aos="fade-up">
+                        <div class="box">
+                            <h3>04</h3>
+                            <h4>Menyediakan yang dibutuhkan dari sistem informasi</h4>
+                            <p>Nah tentunya dalam desain database harus disesuaikan sama tujuannya, menyediakan apa yang dibutuhkan bukannya memasukkan semua data bahkan yang tidak berhubungan dengan sistem informasi</p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="ilmu" class="ilmu">
+            <hr>
+            <br>
+            <div class="container">
+                <div class="section-title" data-aos="zoom-in">
+                    <h3 id="h3">Bagaimana <span>step-step dalam desain database?</span></h3>
+                </div>
+                <div class="card mb-3" data-aos="fade-up">
+
+                    <div class="col-md-12">
+                        <div class="card-body">
+                            <h5 class="card-title">Step 1 : Pengumpulan Data dan Analisis Requirement</h5>
+                            <p class="card-text">Step pertama yang dilakukan ini yaitu analisis requirement. Akan dilakukan dulu analisis mengenai database yang mau dibuat, bagaimana requirement user viewnya ? dan juga bagaimana data tersebut bisa diakses?. Dalam manajemen
+                                requirements ini, ada 2 pendekatan yang bisa dipilih, yaitu terpusat dan view integration. Pendekatan terpusat yaitu dimana kebutuhan dari setiap user view digabung menjadi serangkaian kebutuhan tunggal dari aplikasi basis
+                                data. Sedangkan pendekatan integration yaitu dimana kebutuhan dari setiap user view digunakan untuk membuat model data terpisah untuk merepresentasikan user view tersebut.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row no-gutters">
+                        <div class="col-md-6">
+                            <div class="text-center">
+                                <img src="assets/img/terpusat.png" class="card-img" alt="...">
+                                <p class="card-text"><small class="text-muted">Contoh pendekatan terpusat</small></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="text-center">
+                                <img src="assets/img/integrasi.png" class="card-img" alt="...">
+                                <p class="card-text"><small class="text-muted">Contoh pendekatan view integration</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="card mb-3" data-aos="fade-up">
+                    <div class="row no-gutters">
+
+                        <div class="col-md-12">
+                            <div class="card-body">
+                                <h5 class="card-title">Step 2 : Desain Konseptual</h5>
+                                <div class="col-md-12">
+                                    <div class="text-center">
+                                        <img src="assets/img/contoherd.jpg" class="card-img" alt="contoh ERD">
+                                        <p class="card-text"><small class="text-muted">Contoh ERD</small></p>
+                                    </div>
+                                </div>
+                                <p class="card-text">Pada step ke-2 ini, memberikan gambaran yang lengkap dari struktur basis data yaitu arti, hubungan, dan batasan-batasannya. Pada step ini dibuat Entity Relationship Modeling (E-R Modeling). Untuk membuat E-R modeling ini
+                                    yang dilakukan pertaman adalah identifikasi dan tentukan apa saja aturan-aturan yang dibuat. Lalu tentukan entitas utamanya. Kemudian, setelah entitasnya sudah ditentukan, tentukan hubungan antar entitasnya tersebut
+                                    (many to many, many to one atau one to one). Lalu, definisikan atribut, primary key atau foreign key pada tiap entitas. Kemudian buatlah E-R diagramnya. Setelah dibuat, evaluasi kembali E-R diagramnya apakah ada data
+                                    yang berulang ? atau apakah ada yang perlu ditambah? Lakukan verifikasi dan modifikasi untuk menghasilkan E-R Modelling yang sesuai dengan yang diinginkan. Contoh ERD bisa diliat di gambar diatas, ada entitas mahasiswa
+                                    dan matakuliah yang berelasi many to many(M:N)
+                                    <br>
+                                    <br>Dalam design database ini, ada beberapa strategi yang bisa digunakan yaitu :
+                                    <ul>1. Top Down : Strategi ini dimulai dengan menentukan high-level entity type terlebih dahulu, lalu nanti dibagi menjadi beberapa lower-level entity type dan relationship type. Misalkan dimulai dari entitas "mata_kuliah"
+                                        yang memiliki atribut semester, dosen dan kode_matkul. Lalu 1 entitas ini dibagi menjadi 2 entitas yaitu entitas "mata_kuliah" dan entitas "dosen" yang memiliki relasi "diajar" jadi matakuliah yang diajarkan oleh
+                                        dosen. Atributnya juga terbagi, untuk atribut nama dosen pindah ke entitas dosen bukan lagi di entitas "mata_kuliah"</ul>
+                                    <ul>2. Bottom up : Strategi ini dimulai dengan atribut lalu dikelompokkan menjadi entity type dan relationship type kemudian ditambahkan relationship antar entitynya.</ul>
+
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="card mb-3" data-aos="fade-up">
+                    <div class="row no-gutters">
+                        <div class="col-md-12">
+                            <div class="card-body">
+                                <h5 class="card-title">Step 3 : Pemilihan DBMS</h5>
+                                <p>Langkah-langkah dalam memilih database yaitu dimulai dari melihat-lihat dulu informasi terkait DBMS dari referensi yang ada. Kedua, buat daftar 2 atau beberapa produk kemudian lakukan evaluasi. Yang terakhir buat sebuah
+                                    rekomendasi laporannya terkait DBMS itu. </p>
+                                <p style="font-weight:bold">Apa saja yang perlu dipertimbangkan dalam pemilihan DBMS ?</p>
+
+                                <div class="row">
+                                    <div class="col-lg-4 mb-3" data-aos="fade-up">
+                                        <p style="font-weight:bold">Portability</p>
+                                        <p class="card-text" style="text-align:justify">Bagaimana DBMS yang dibutuhkan, apakah harus sesuai dengan platform tertentu? atau dengan operating system tertentu? Ini juga perlu dipertimbangkan dalam memilih DBMS agar nantinya setelah memilih tidak kesulitan
+                                            lagi menyesuaikan
+                                        </p>
+                                    </div>
+                                    <div class="col-lg-4 " data-aos="fade-up">
+                                        <p style="font-weight:bold">Database Model</p>
+                                        <p class="card-text" style="text-align:justify">Database model ini berkaitan dengan relation dari databasenya. Selain itu,misalnya jika data yang disimpan dalam database mengikuti struktur hirarki, maka suatu jenis hirarki dari DBMS harus dipikirkan.</p>
+                                    </div>
+
+                                    <div class="col-lg-4 mb-3" data-aos="fade-up">
+                                        <p style="font-weight:bold">Hardware Requirement</p>
+                                        <p class="card-text" style="text-align:justify">Hal terakhir yang harus diperhatikan juga bagaimana persyaratan hardware dari DBMS itu? Misalkan, suatu DBMS itu akan lebih maksimal jika dijalankan dengan prosesor tertentu atau dengan kapasitas memori tertentu.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6 " data-aos="fade-up">
+                                        <p style="font-weight:bold">Cost</p>
+                                        <p class="card-text" style="text-align:justify">Harus dipertimbangkan biaya-biaya yang ada, seperti biaya pembelian perangkat lunaknya, biaya untuk maintenance (berkaitan dengan pemeliharaan DBMS agar kualitasnya tetap baik dan up to date), biaya hardware baru
+                                            yang mungkin diperlukan (contohnya memori, disk drive), biaya pembuatan database, biaya training (untuk sistem database yang komplek, perlu dilakukan training dulu untuk dapat menggunakan dan memprogram DBMS)
+                                            dan biaya operasi.</p>
+                                    </div>
+                                    <div class="col-lg-6 " data-aos="fade-up">
+                                        <p style="font-weight:bold">Features & Tools</p>
+                                        <p class="card-text" style="text-align:justify">Perlu juga untuk mempertimbangkan bagaimana fitur dan tools pada DBMS yang ingin digunakan, apakah berguna untuk desain database yang sudah dibuat? Lalu apakah ada fitur backup pada DBMS yang diperlukan ? serta
+                                            bagaimana fitur keamanan data pada DBMS itu perlu dipertimbangkan dalam memilih DBMS.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3" data-aos="fade-up">
+                    <div class="row no-gutters">
+
+                        <div class="col-md-12">
+                            <div class="card-body">
+                                <h5 class="card-title">Step 4 : Logical Design</h5>
+                                <p class="card-text">Pada logical design ini, mengubah desain basis konseptual basisdata kedalam skema basisdata dalam model data yang dipilih oleh DBMS. Ada 2 proses pemetaan model data, yaitu :
+                                    <ul>
+                                        <li>Pemetaan yang Tidak Tergantung pada Sistem (System- Independet Mapping). Pada bentuk ini, pemetaan tidak mempertimbangkan karakteristik khusus atau kasus khusus yang diaplikasikan ke implementasi DBMS dari model
+                                            data. </li>
+                                    </ul>
+                                    <ul>
+                                        <li>Penyesuaian Skema ke DBMS yang Spesifik (Tailoring the Schemas to Specific DBMS). DBMS yang berbeda mengimplementasikan model data dengan menggunakan pemodelah khusus. Hasilnya merupakan pernyataan DDL dari DBMS
+                                            yang dipilih
+                                        </li>
+                                    </ul>
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3" data-aos="fade-up">
+                    <div class="row no-gutters">
+
+                        <div class="col-md-12">
+                            <div class="card-body">
+                                <h5 class="card-title">Step 5 : Physical Design</h5>
+                                <p class="card-text">Pada step ini, memilih bagaimana karakteristik dalam pengaksesan data dan penyimpanan datanya. Maksudnya yaitu merancang spesifikasi-spesifikasi untuk basis data yang disimpan yang berhubungan dengan struktur-struktur penyimpanan
+                                    fisik, penempatan record dan jalur akses. Desain fisik ini nantinya dapat mempengaruhi performance database karenya, ada beberapa yang harus diperhatikan dalam menentukan desain fisik. Pertama yaitu waktu respon selama
+                                    eksekusi, dimana waktu respon database ini dipengaruhi waktu akses basis data untuk data item yang ditunjuk oleh suatu transaksi.Lalu yang kedua yaitu penggunaan ruang penyimpanan. Dan yang terakhir yaitu rata-rata
+                                    jumlah transaksi yang dapat diproses per menit oleh sistem basis data
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3" data-aos="fade-up">
+                    <div class="row no-gutters">
+
+                        <div class="col-md-12">
+                            <div class="card-body">
+                                <h5 class="card-title">Step 6 : Desain Aplikasi dan Keamanan</h5>
+                                <p class="card-text">Di tahap terakhir ini, harus dipertimbangkan bagaimana aspek aplikasi yang berada di luar database sehingga mempersiapkan sistem dengan keamanan yang baik. Misalnya, sistem DBMSnya di enkripsi</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="text-center">
+                    <h5>Rofifah Nurul Annisa | D121181508 | Kelas A </h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container footer-bottom clearfix">
+            <div class="text-center">
+                <h4>Reach Me by :
+                    <a href="mailto:rofifahnurul00@gmail.com"> <img src="assets/img/gmail.png" class="gmail" alt="Gmail"></a>
+                    <a href="https://www.linkedin.com/in/rofifah-nurul-annisa-1608"><img src="assets/img/linkedln.png" class="linkedln" alt="linkedln"></a>
+                </h4>
+
+            </div>
+
+        </div>
+    </footer>
+    <a href="#" class="back-to-top">back to top</a>
+
+    <script src="assets/js-tambahan/jquery/jquery.min.js"></script>
+    <script src="assets/js-tambahan/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js-tambahan/jquery.easing/jquery.easing.min.js"></script>
+    <script src="assets/js-tambahan/jquery-sticky/jquery.sticky.js"></script>
+    <script src="assets/js-tambahan/venobox/venobox.min.js"></script>
+    <script src="assets/js-tambahan/waypoints/jquery.waypoints.min.js"></script>
+    <script src="assets/js-tambahan/counterup/counterup.min.js"></script>
+    <script src="assets/js-tambahan/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/js-tambahan/aos/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
+
+</html>
+
+</html>
+
+</html>
+
+</html>di
+
+</html>di
+
+</html>di
+
+</html>di
+
+</html>di
