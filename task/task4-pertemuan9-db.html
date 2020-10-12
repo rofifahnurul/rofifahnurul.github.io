@@ -217,10 +217,10 @@
                                 ada di pesawat = 101 + 79 = 180. Ini artinya, setelah transaksi selesai dilakukan data total kursi yang ada di pesawat tidak berubah (konsisten) = 180. </p>
                             <h4>Isolation requirement</h4>
                             <p>Jika transaksi di kasus 2 ini masih berlangsung dan ada transaksi lainnya maka transaksi ini harus terisolasi dari transaksi lainnya. Mengapa? Karena jika tidak nanti juga berpengaruh ke konsistennya data di database.
-                                <br> Misalnya, transaksi diatas diumpamakan sebagai transaksi 1. Lalu ada transaksi 2 yaitu sum (jmlPenumpangCheckIn + jmlKursiKosong). Transaksi 1 dan transaksi 2 harus saling terisolasi. Maksudnya, jika transaksi 1 belum
-                                selesai, baru sampai di step 3. Setelah di step 3, nilainya yaitu jumlah penumpang yang sudah check-in = 101, jumlah kursi yang masih kosong = 80. Maka jika transaksi 2 berjalan setelah step 3 di transaksi 1, total kursi
-                                di pesawat menjadi = 101 + 80 = 181. Ini tidak sesuai dengan yang seharusnya yaitu 180. Karena itu transaksi 2 tidak bisa dijalankan jika transaksi 1 masih berlangsung, namun bisa dijalankan sebelum atau sesudah transaksi
-                                selesai dijalankan.
+                                <br> Misalnya, transaksi diatas diumpamakan sebagai transaksi 1. Lalu ada transaksi 2 yaitu sum (jmlPenumpangCheckIn + jmlKursiKosong). Transaksi 1 dan transaksi 2 harus saling terisolasi.<br>Jika tidak terisolasi, misalkan
+                                transaksi 2 berjalan setelah step 3 yang mana setelah di step 3, nilainya yaitu jumlah penumpang yang sudah check-in = 101, jumlah kursi yang masih kosong = 80. Maka jika transaksi 2 berjalan setelah step 3 di transaksi
+                                1, total kursi di pesawat menjadi = 101 + 80 = 181. Ini tidak sesuai dengan yang seharusnya yaitu 180. Karena itu transaksi 2 tidak bisa dijalankan jika transaksi 1 masih berlangsung, namun bisa dijalankan sebelum atau
+                                sesudah transaksi selesai dijalankan.
                             </p>
                             <h4>Durability requirement</h4>
                             <p>Transaksi tersebut harus disimpan di database dan secara permanen. Sehingga walaupun ada kesalahan sistem, tetap tersimpan</p>
