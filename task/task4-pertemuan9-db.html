@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task 4 Basis Data</title>
+
+    <link href="assets/js-tambahan/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/js-tambahan/icofont/icofont.min.css" rel="stylesheet">
+    <link href="assets/js-tambahan/venobox/venobox.css" rel="stylesheet">
+    <link href="assets/js-tambahan/aos/aos.css" rel="stylesheet">
+    <link href="assets/css/task4basdat.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Tangerine&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header id="header">
+        <div class="container d-flex">
+            <nav class="nav-menu d-none d-lg-block">
+                <ul>
+                    <li><a href="">Basis Data</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="task1.html">Task 1</a></li>
+                    <li><a href="task2-pertemuan5-db.html">Task 2</a></li>
+                    <li><a href="task3-pertemuan6-db.html">Task 3</a></li>
+                    <li class="active"><a href="task4-pertemuan9-db.html">Task 4</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="hero-container" data-aos="fade-up">
+            <h1>Transaksi</h1>
+            <p style="color:white;font-style: italic;">"Transaksi adalah suatu aksi yang dilakukan dengan tujuan mengakses dan mengubah data pada database"</p>
+
+            <a href="#kasus1" class="btn-get-started scrollto">Read More</a>
+        </div>
+    </section>
+
+    <main id="main">
+        <hr>
+        <section id="ilmu" class="ilmu">
+            <div class="container">
+                <div class="section-title" data-aos="zoom-in">
+                    <h3>Bagaimana agar integritas data tetap terjaga dalam transaksi ?</h3>
+                    <p> Ada beberapa yang harus diperhatikan, yaitu ACID properties sebagai berikut
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 mb-3" data-aos="fade-up">
+                        <div class="box">
+                            <h3>01</h3>
+                            <h4>Atomicity</h4>
+                            <p>Menjamin bahwa semuanya transaksi berhasil dilakukan (ada pada database) atau gagal keseluruhan (tidak ada sama sekali). </p>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-3" data-aos="fade-up">
+                        <div class="box">
+                            <h3>02</h3>
+                            <h4>Consistency</h4>
+                            <p>Memastikan data tetap konsisten baik sebelum transaksi maupun setelah transaksi. </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-3" data-aos="fade-up">
+                        <div class="box">
+                            <h3>03</h3>
+                            <h4>Isolation</h4>
+                            <p>Jika ada beberapa transaksi, maka jika suatu transaksi masih berjalan maka harus terisolasi dari transaksi lainnya agar tidak terjadi ketidak-konsisten-an data. </p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 mb-3" data-aos="fade-up">
+                        <div class="box">
+                            <h3>04</h3>
+                            <h4>Durability</h4>
+                            <p>Memastikan data tersebut sudah disimpan ke sistem dan secara permanen agar jika terjadi kesalahan/kegagalan data masih tersedia di database.</p>
+
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <hr>
+        <section id="kasus1" class="kasus1">
+            <div class="container">
+                <div class="section-title" data-aos="zoom-in">
+                    <h3>Contoh Kasus 1 :</h3>
+                    <h3 style="color:#7e7b7b">Kasus mahasiswa mendaftar di mata kuliah pada krs</h3>
+
+                </div>
+
+                <div class="col-lg-12 mb-3 d-flex justify-content-center" data-aos="zoom-in">
+                    <img src="assets/img/krs.png" alt="Gambar contoh krs">
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-7 mb-2" data-aos="fade-up">
+                        <div class="box">
+                            <h4>Penjelasan Kasus</h4>
+                            <p>Mahasiswa ingin mendaftar suatu matkul dengan kuota tertentu. Saat mahasiswa mendaftar, maka jumlah mahasiswa yang terdaftar di mata kuliah itu akan bertambah dan kuota yang tersisa di mata kuliah itu akan berkurang.
+                            </p>
+                            <p>Misalkan transaksi yang dilakukan yaitu seorang mahasiswa mendaftar di suatu matkul, dengan sisa kuota yang tersedia = 20, dan jumlah mahasiswa yang sudah terdaftar di mata kuliah tersebut = 10. </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-5 mb-2" data-aos="fade-up">
+                        <div class="box" id="box">
+                            <h4>Contoh transaksi pada kasus 1</h4>
+                            <ol>
+                                <li>
+                                    Read (jmlMhsTerdaftar)
+                                </li>
+                                <li>
+                                    jmlMhsTerdaftar := jmlMhsTerdaftar + 1
+                                </li>
+                                <li>
+                                    Write (jmlMhsTerdaftar)
+                                </li>
+                                <li>
+                                    Read (sisaKuota)
+                                </li>
+                                <li>
+                                    sisakuota := sisaKuota - 1
+                                </li>
+                                <li>
+                                    Write (sisaKuota)
+                                </li>
+                            </ol>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-12 mb-3" data-aos="fade-up">
+                        <div class="box">
+                            <h4>Alasan operasi tersebut harus dilakukan dalam transaksi</h4>
+                            <h5> Atomicity requirement</h5>
+                            <p>Transaksi di kasus 1 ini tidak boleh jika hanya berhasil sebagian karena nanti berpengaruh untuk ke konsistenan databasenya. Contohnya, tidak boleh jika hanya hanya step 1-4 yang berhasil tetapi step 5 gagal. Jika salah satu
+                                step sudah gagal, maka keseluruhan dianggap gagal.</p>
+                            <h5>Consistency requirement</h5>
+                            <p>Transaksi di kasus 1 ini syaratnya harus konsisten yaitu jumlah kuota keseluruhan pada matkul itu tidak berubah. Sesuai kasus diatas, sebelum dilakukan transaksi, kuota yang tersisa = 20, jumlah mahasiswa yang terdaftar di
+                                matkul itu = 10, jadi total kuota yang disediakan oleh mata kuliah tersebut = 20 + 10 = 30. <br>Setelah dilakukan transaksi, jumlah mahasiswa yang terdaftar di mata kuliah itu = 10 + 1 = 11, kuota yang tersisa di mata kuliah
+                                itu = 20 - 1 = 19, total kuota yang disediakan = 19 + 11 = 30. Ini artinya, setelah transaksi selesai dilakukan data total kuota yang disediakan mata kuliah tersebut di database tetap konsisten = 30 </p>
+                            <h5>Isolation requirement</h5>
+                            <p>Jika transaksi di kasus 1 masih berlangsung dan ada transaksi lainnya maka transaksi 1 ini harus terisolasi dari transaksi lainnya. Mengapa? Karena jika tidak nanti juga berpengaruh ke tidak konsistenan database.
+                                <br> Misalnya, transaksi diatas diumpamakan sebagai transaksi 1. Lalu ada transaksi 2 yaitu menjumlahkan jumlah mahasiswa yang terdaftar dan kuota yang tersisa di mata kuliah tersebut. Transaksi 1 harus terisolasi dari
+                                transaksi 2. Maksudnya, jika transaksi 1 belum selesai, misalkan baru sampai di step 3, maka transaksi 2 tidak bisa mengetahui jumlah mahasiswa saat step 3 selesai karena transaksi 1 itu berakhir di step 6. Jadi, transaksi
+                                2 hanya bisa mengetahui atau mengambil data jumlah mahasiswa yang terdaftar/kuota yang tersisa sebelum transaksi 1 dilakukan atau saat transaksi 1 sudah selesai, bukan bersamaan (mengambil data dari proses transaksi 1 yang
+                                masih berjalan). </p>
+                            <h5>Durability requirement</h5>
+                            <p>Transaksi tersebut harus disimpan di database dan secara permanen. Sehingga walaupun ada kesalahan sistem, tetap tersimpan</p>
+                            <br>
+                            <p style="font-weight:bold">Jadi, operasi tersebut harus dilakukan dalam transaksi karena membutuhkan requirement ACID. Serta, dalam kenyataannya juga, jumlah kuota yang disediakan mata kuliah tidak berubah dan jika jumlah mahasiswa yang mendaftar bertambah
+                                maka kuotanya akan berkurang. Jika hanya salah satunya yang bertambah/berkurang nanti mahasiswa maupun dosen kebingungan dan bahkan bisa menyebabkan jumlah mahasiswa terdaftar melebihi kuota yang disediakan, karena saat
+                                jumlah mahasiswa terdaftar bertambah kuota yang tersisa tidak berkurang. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+
+        <section id="kasus1" class="kasus1">
+            <div class="container">
+                <div class="section-title" data-aos="zoom-in">
+                    <h3>Contoh Kasus 2 :</h3>
+                    <h3 style="color:#7e7b7b">Kasus penumpang melakukan check-in untuk suatu penerbangan di bandara</h3>
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-7 mb-2" data-aos="fade-up">
+                        <div class="box">
+                            <h4>Penjelasan Kasus</h4>
+                            <p>Sebelum jadwal keberangkatan pesawat, penumpang perlu check-in terlebih dahulu untuk mendapatkan boarding pass yang berisi nomor kursi. Jadi, dalam kasus ini ada data jumlah penumpang yang sudah check-in dan kursi yang masih
+                                kosong.
+                            </p>
+                            <p>Misalkan transaksi yang dilakukan yaitu seorang penumpang melakukan check in untuk suatu penerbangan. Jumlah penumpang yang sudah check-in pada penerbangan itu = 100 orang. Jumlah kursi yang masih kosong untuk penerbangan itu
+                                = 80. </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 mb-2" data-aos="fade-up">
+                        <div class="box" id="box">
+                            <h4>Contoh transaksi pada kasus 2</h4>
+                            <ol>
+                                <li> Read (jmlPenumpangCheckIn) </li>
+                                <li> jmlPenumpangCheckIn := jmlPenumpangCheckIn+ 1</li>
+                                <li> Write (jmlPenumpangCheckIn) </li>
+                                <li> Read (jmlKursiKosong)</li>
+                                <li> jmlKursiKosong := jmlKursiKosong - 1</li>
+                                <li> Write (jmlKursiKosong)</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 mb-3" data-aos="fade-up">
+                        <div class="box">
+                            <h4>Alasan operasi tersebut harus dilakukan dalam transaksi</h4>
+
+                            <h5> Atomicity requirement</h5>
+                            <p>Transaksi di kasus 2 ini sangat penting karena berkaitan dengan pendataan penumpang jadi tidak bisa jika hanya berhasil sebagian. Jadi hanya bisa 2 kemungkinan, berhasil seluruhnya atau gagal seluruhnya(tidak berhasil sama
+                                sekali). </p>
+                            <h5>Consistency requirement</h5>
+                            <p>Transaksi di kasus 2 ini syaratnya harus konsisten. Yang konsisten yaitu jumlah kursi di pesawat yang tetap. Sesuai kasus diatas, sebelum dilakukan transaksi, kursi yang masih kosong = 80, jumlah penumpang yang sudah melakukan
+                                check-in = 100, jadi jumlah kursi yang ada di pesawat = 100 + 80 = 180. <br>Setelah dilakukan transaksi, jumlah penumpang yang sudah check-in = 100 + 1 = 101, jumlah kursi yang masih kosong = 80 - 1 = 79 total kursi yang
+                                ada di pesawat = 101 + 79 = 180. Ini artinya, setelah transaksi selesai dilakukan data total kursi yang ada di pesawat tidak berubah (konsisten) = 180. </p>
+                            <h5>Isolation requirement</h5>
+                            <p>Jika transaksi di kasus 2 ini masih berlangsung dan ada transaksi lainnya maka transaksi ini harus terisolasi dari transaksi lainnya. Mengapa? Karena jika tidak nanti juga berpengaruh ke konsistennya data di database.
+                                <br> Misalnya, transaksi diatas diumpamakan sebagai transaksi 1. Lalu ada transaksi 2 yaitu sum (jmlPenumpangCheckIn + jmlKursiKosong). Transaksi 1 dan transaksi 2 harus saling terisolasi. Maksudnya, jika transaksi 1 belum
+                                selesai, baru sampai di step 3. Setelah di step 3, nilainya yaitu jumlah penumpang yang sudah check-in = 101, jumlah kursi yang masih kosong = 80. Maka jika transaksi 2 berjalan setelah step 3 di transaksi 1, total kursi
+                                di pesawat menjadi = 101 + 80 = 181. Ini tidak sesuai dengan yang seharusnya yaitu 180. Karena itu transaksi 2 tidak bisa dijalankan jika transaksi 1 masih berlangsung, namun bisa dijalankan sebelum atau sesudah transaksi
+                                selesai dijalankan.
+                            </p>
+                            <h5>Durability requirement</h5>
+                            <p>Transaksi tersebut harus disimpan di database dan secara permanen. Sehingga walaupun ada kesalahan sistem, tetap tersimpan</p>
+                            <br>
+                            <p style="font-weight:bold">Jadi, operasi tersebut harus dilakukan dalam transaksi karena membutuhkan requirement ACID. Serta, dalam kenyataannya juga, data jumlah penumpang yang sudah check in dan kursi yang tersedia ini saling berkaitan. Karena untuk
+                                menghindari adanya kesalahan pemberian kursi pada penumpang sehingga penumpang bisa saja tidak dapat kursi di pesawat. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+
+    </main>
+
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="text-center">
+                    <h5>Rofifah Nurul Annisa | D121181508 | Kelas A </h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container footer-bottom clearfix">
+            <div class="text-center">
+                <div style="margin-bottom: 1%;">
+                    <a href="mailto:rofifahnurul00@gmail.com"> <img src="assets/img/gmail.png" class="gmail" alt="Gmail"></a>
+                    <a href="https://www.linkedin.com/in/rofifah-nurul-annisa-1608"><img src="assets/img/linkedln.png" class="linkedln" alt="linkedln"></a>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+    <a href="#" class="back-to-top">back to top</a>
+
+    <script src="assets/js-tambahan/jquery/jquery.min.js"></script>
+    <script src="assets/js-tambahan/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js-tambahan/jquery.easing/jquery.easing.min.js"></script>
+    <script src="assets/js-tambahan/jquery-sticky/jquery.sticky.js"></script>
+    <script src="assets/js-tambahan/venobox/venobox.min.js"></script>
+    <script src="assets/js-tambahan/waypoints/jquery.waypoints.min.js"></script>
+    <script src="assets/js-tambahan/counterup/counterup.min.js"></script>
+    <script src="assets/js-tambahan/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/js-tambahan/aos/aos.js"></script>
+    <script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>
+
+</body>
+
+</html>
