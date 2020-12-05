@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Finite Automata</title>
+
+    <link href="assets/js-tambahan/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/js-tambahan/icofont/icofont.min.css" rel="stylesheet">
+    <link href="assets/js-tambahan/venobox/venobox.css" rel="stylesheet">
+    <link href="assets/js-tambahan/aos/aos.css" rel="stylesheet">
+    <link href="assets/css/finite-automata.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Tangerine&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header id="header">
+        <div class="container d-flex">
+            <nav class="nav-menu d-none d-lg-block">
+                <ul>
+                    <li><a href="">TBO</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="finite-automata.html">DFA/NFA</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="hero-container" data-aos="fade-up">
+            <h1>Finite Automata</h1>
+            <p style="color:white;font-style: italic;">"Finite Automata adalah mesin automata dari sebuah bahasa regular "</p>
+
+            <a href="#kasus1" class="btn-get-started scrollto">Read More</a>
+        </div>
+    </section>
+
+    <main id="main">
+        <hr>
+        <section class="ilmu">
+            <div class="container">
+
+                <h3 class="text-center m-5" data-aos="fade-up">Aplikasi Pemanfaatan DFA/NFA</h3>
+                <p class="text-left m-5" data-aos="fade-up">Finite State Automata (FSA) disebut juga Finite Automata (FA) merupakan suatu model matematika dari suatu sistem dan yang menerima input dan menghasilkan output diskrit. Finite State Automata memiliki state yang banyaknya berhingga (terbatas)
+                    dan dapat berpindah-pindah dari satu state ke state lain. Perubahan state ini dinyatakan dengan fungsi transisi. State adalah kondisi atau keadaan atau kedudukan.
+                    <br> Dalam FSA terdapat Deterministic FInite Automata (DFA) dan Non-Deterministic Finite Automata (NFA). Pemanfaatan DFA/NFA yang sering ditemui pada Vending Machine maupun ATM. Namun, selain itu NFA/DFA juga bisa dimanfaatkan untuk
+                    hal lain, misalnya dalam pengisian krs mahasiswa. </p>
+                <div class="row justify-content-center" data-aos="fade-up">
+                    <div class="col-lg-5 justify-content-center" data-aos="fade-up">
+                        <div class="card mx-auto " style="width: 70%;">
+                            <img src="assets/img/vending-1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">NFA dapat diaplikasikan pada vending machine</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5 justify-content-center" data-aos="fade-up">
+                        <div class="card mx-auto" style="width: 70%;">
+                            <img src="assets/img/atm-1.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <p class="card-text">NFA dapat diaplikasikan dalam proses transaksi di ATM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ilmu" class="ilmu">
+            <div class="container">
+                <div id="box-out" class="box ">
+                    <div data-aos="zoom-in">
+                        <h3 class="text-center m-5">Aplikasi Pemanfaatan DFA/NFA pada Proses Transaksi Via ATM</h3>
+                        <p class=" text-center mb-3 mt-3 ml-3 ">Salah satu contoh penerapan finite state automata yaitu transaksi via ATM. Dalam transaksi via ATM ini, dibagi menjadi beberapa state untuk memudahkan pengguna. </p>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-lg-5 m-3 " data-aos="fade-up ">
+                            <div class="box ">
+                                <p> <span class="mr-2 ">01</span> Memasukkan kartu atm </p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-5 m-3 " data-aos="fade-up ">
+                            <div id="atom " class="box ">
+                                <p> <span class="mr-2 ">02</span> Memilih bahasa</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center ">
+                        <div class="col-lg-5 m-3 " data-aos="fade-up">
+                            <div id="atom " class="box ">
+                                <p> <span class="mr-2 ">03</span> Masukkan PIN</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-5 m-3 " data-aos="fade-up ">
+                            <div id="atom " class="box ">
+                                <p> <span class="mr-2 ">04</span> Memilih jenis transaksi</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center ">
+                        <div class="col-lg-5 m-3 " data-aos="fade-up ">
+                            <div id="atom " class="box ">
+                                <p> <span class="mr-2 ">05</span>Jika memilih transaksi tunai, dapat memilih nominal uang yang akan diambil lalu dilanjut dengan melakukan proses penarikan tunai</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-5 m-3 " data-aos="fade-up ">
+                            <div id="atom " class="box ">
+                                <p> <span class="mr-2 ">06</span>Jika memilih transfer, dilanjutkan dengan memilih bank dan nomor rekening tujuan serta nominal transfernya.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card text-center  mt-5 ml-5 mr-5 mb-3 " data-aos="fade-up">
+                        <div class="row  justify-content-center no-gutters">
+                            <div class="col-md-5 m-2">
+                                <p class="text-center"><small class="text-muted">Gambar 1. Diagram State</small></p>
+                                <img src="assets/img/diagram-state.png" class="card-img" alt="...">
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card-body">
+                                    <h5 class="card-title">Diagram State</h5>
+                                    <p class="card-text">Gambar 1 ini merupakan gambar diagram state dari transaksi Via ATM. Dengan keterangan sebagai berikut :<br> Q = {A, B, C, D, E, F, G, H, I, J, K, L, M}
+                                        <br> &sum; = { &epsilon;, 1, 0}
+                                        <br> S = {A}
+                                        <br> F = {M}
+                                        <br> &Delta; = {((A, 1)B), ((B, 1)C), ((C, Ɛ)C), ((C, 1)D), ((D, 1)E),((D, 1)F), (E, 1)G), ((F, 1)H), ((G, 1)I), ((H, 1)J), ((I, 1)K), ((J, 1)L), ((K, 1)L), ((L, 1)M)}}
+
+                                    </p>
+                                    <br>
+                                    <p>Keterangan pertama yaitu untuk himpunan simbol input yang menyatakan apa yang dilakukan nasabah, yaitu &epsilon; = string kosong, 1 = melanjutkan proses transaksi, 0 = melakukan perulangan.
+                                    </p>
+                                    <br>
+                                    <p>Keterangan kedua yaitu untuk state yang menyatakan proses transaksi, yaitu A = memasukkan kartu ATM, B = memilih bahasa, C = memasukkan pin, D = memilih jenis transaksi, E = memilih jenis transaksi transfer, F = memilih
+                                        jenis transaksi tarik tunai, G = daftar kode bank, H = masukkan nominal tarik tunai, I = masukkan kode bank dan rekening tujuan, J = mengambil uang, K = masukkan nominal transfer, L = proses transaksi berhasil,
+                                        M = mengambil kartu ATM.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card text-center  mt-5 ml-5 mr-5 mb-3 " data-aos="fade-up">
+                        <div class="row justify-content-center">
+                            <div class="col-md-5">
+                                <p class="text-center mt-3 mb-3"><small class="text-muted">Gambar 2. Tabel Relasi</small></p>
+                                <table class="table table-hover table-bordered ">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">&Delta;</th>
+                                            <th scope="col">&epsilon;</th>
+                                            <th scope="col">0</th>
+                                            <th scope="col">1</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">A</th>
+                                            <td>&empty;</td>
+                                            <td>&empty;</td>
+                                            <td>B</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">B</th>
+                                            <td>&empty;</td>
+                                            <td>&empty;</td>
+                                            <td>C</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">C</th>
+                                            <td>C</td>
+                                            <td>&empty;</td>
+                                            <td>D</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">D</th>
+                                            <td>&empty;</td>
+                                            <td>&empty;</td>
+                                            <td>E,F</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">E</th>
+                                            <td>&empty;</td>
+                                            <td>&empty;</td>
+                                            <td>G</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">F</th>
+                                            <td>&empty;</td>
+                                            <td>&empty;</td>
+                                            <td>H</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">G</th>
+                                            <td>&empty;</td>
+                                            <td>&empty;</td>
+                                            <td>I</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">H</th>
+                                            <td>&empty;</td>
+                                            <td>H</td>
+                                            <td>J</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">I</th>
+                                            <td>&empty;</td>
+                                            <td>&empty;</td>
+                                            <td>K</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">J</th>
+                                            <td>&empty;</td>
+                                            <td>&empty;</td>
+                                            <td>L</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">K</th>
+                                            <td>&empty;</td>
+                                            <td>&empty;</td>
+                                            <td>L</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">L</th>
+                                            <td>&empty;</td>
+                                            <td>&empty;</td>
+                                            <td>M</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">M</th>
+                                            <td>&empty;</td>
+                                            <td>&empty;</td>
+                                            <td>&empty;</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="col-md-6 mt-5 mb-5 ml-3 mr-3">
+                                <h5 class="card-title" data-aos="fade-up">Tabel Relasi</h5>
+                                <p>Tabel ini menjelaskan bagaimana perpindahan state yang terjadi jika ada input yang dimasukkan. <br><br> Contohnya pada state D (nasabah memilih transaksi) jika mendapatkan input &epsilon; (nasabah tidak menginput apapun)
+                                    maka akan bernilai kosong. Jika mendapat input 0 (perulangan) maka juga akan bernilai kosong. Tetapi, jika mendapat input 1(nasabah sudah memilih transfer atau tarik tunai) maka akan melanjutkan transaksi dan akan ada
+                                    2 kemungkinan state yaitu pindah ke state E (memilih transaksi transfer) atau F (memilih transaksi tarik tunai).
+                                    <br><br> Contoh lainnya pada state M yaitu state terakhir dimana nasabah mengambil kartu ATM bukan menginput lagi. Karena itu, tidak akan ada perpindahan state lagi.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <h4 class="text-center mt-5 " style="font-style:italic" data-aos="ease-in">Kesimpulan</h4>
+                    <p class="mr-5 ml-5 mb-5" style="font-style:italic" data-aos="fade-up">Pada transaksi via ATM ini didalamnya terdapat pengaplikasian dari Finite State Automata yaitu Non-Deterministic Finite Automata (NFA). Karena dapat dilihat dalam transaksi via ATM yang dibagi menjadi beberapa state (dalam contoh ada
+                        13 state) dan juga seperti dalam Non-Deterministic Finite Automata yang memungkinkan satu simbol menimbulkan transisi ke lebih dari satu kondisi dan memberikan beberapa kemungkinan perubahan sehingga keluarannya tidak dapat dipastikan.
+                    </p>
+
+
+                </div>
+                <div id="box-out" class="box mt-5">
+                    <h3 class="m-5" data-aos="fade-up">Referensi</h3>
+                    <p class="ml-5 mr-5" data-aos="fade-up">Nendisha, Azri RIshard, Magdalena A. Ineke Pakereng. 2017. <span id="referensi">Penerapan Finite State Automata Pada Proses Transaksi Via ATM</span>. Salatiga:Universitas KristenSatya Wacana </p>
+                    <br>
+                    <p class="ml-5 mr-5 mb-5" data-aos="fade-up"> Sumber gambar : https://jabar.idntimes.com/hype/humor/danti/15-vending-machine-paling-anti-mainstream-di-dunia-canggih-atau-aneh-regional-jabar</p>
+                </div>
+            </div>
+        </section>
+        <hr>
+
+
+    </main>
+
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="text-center">
+                    <h5>Rofifah Nurul Annisa | D121181508 | Kelas A </h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container footer-bottom clearfix">
+            <div class="text-center">
+                <div style="margin-bottom: 1%;">
+                    <a href="mailto:rofifahnurul00@gmail.com"> <img src="assets/img/gmail.png" class="gmail" alt="Gmail"></a>
+                    <a href="https://www.linkedin.com/in/rofifah-nurul-annisa-1608"><img src="assets/img/linkedln.png" class="linkedln" alt="linkedln"></a>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+    <a href="# " class="back-to-top ">back to top</a>
+
+    <script src="assets/js-tambahan/jquery/jquery.min.js "></script>
+    <script src="assets/js-tambahan/bootstrap/js/bootstrap.bundle.min.js "></script>
+    <script src="assets/js-tambahan/jquery.easing/jquery.easing.min.js "></script>
+    <script src="assets/js-tambahan/jquery-sticky/jquery.sticky.js "></script>
+    <script src="assets/js-tambahan/venobox/venobox.min.js "></script>
+    <script src="assets/js-tambahan/waypoints/jquery.waypoints.min.js "></script>
+    <script src="assets/js-tambahan/counterup/counterup.min.js "></script>
+    <script src="assets/js-tambahan/isotope-layout/isotope.pkgd.min.js "></script>
+    <script src="assets/js-tambahan/aos/aos.js "></script>
+    <script src="assets/js/main.js "></script>
+
+
+</body>
+
+</html>
