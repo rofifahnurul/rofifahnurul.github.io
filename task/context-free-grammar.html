@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Context Free Grammar</title>
+
+    <link href="assets/js-tambahan/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/js-tambahan/icofont/icofont.min.css" rel="stylesheet">
+    <link href="assets/js-tambahan/venobox/venobox.css" rel="stylesheet">
+    <link href="assets/js-tambahan/aos/aos.css" rel="stylesheet">
+    <link href="assets/css/context-free-grammar.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Tangerine&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header id="header">
+        <div class="container d-flex">
+
+            <nav class="nav-menu d-none d-lg-block">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active"><a href="context-free-grammar.html">CFG</a></li>
+                    <li class=""><a href="regular-expressions.html">Regex</a></li>
+                    <li class=""><a href="finite-automata.html">DFA-NFA</a></li>
+
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="hero-container" data-aos="fade-up">
+            <h1> Context Free Grammars</h1>
+            <p class="ml-5 mr-5" style="color:white;font-style: italic;">Context Free Grammars adalah adalah cara mendeskripsikan bahasa dengan aturan rekursif yang disebut produksi. CFG terdiri dari sekumpulan variabel, a set Setiap string nol atau simbol terminal, dan variabel start, serta hasilnya. produksi
+                terdiri dari variabel kepala dan b o dy terdiri dari a lebih banyak variabel dan / atau terminal.</p>
+
+            <a href="#ilmu" class="btn-get-started scrollto">Read More</a>
+        </div>
+    </section>
+
+    <main id="main">
+        <hr>
+        <section class="ilmu">
+            <div class="container">
+
+                <h3 class="text-center m-5" style="font-weight:600" data-aos="fade-up">Apa itu Context Free Grammars (CFG) ?</h3>
+                <p class="section-title text-left m-5" data-aos="fade-up">Manusia saat ini menginginkan kemudahan. Salah satu bentuk kemudahannya yaitu untuk melakukan pencarian saat ini tidak lagi melakukan pencarian secara manual, sebagai gantinya mesin bekerja untuk mencapai apa yang diinginkan manusia. Mesin
+                    pencari berkembang di sistem operasi, internet, bahkan editor teks. Mesin melakukan pencarian dengan mencocokkan pola yang diberikan dengan tabel indeks (teks) yang tersedia. Dengan regular expression, mesin dapat melakukan pencarian
+                    ini. Regular Expression (Regex) merupakan sebuah teks (string) yang mendefinisikan sebuah pola pencarian sehingga dapat membantu kita untuk melakukan matching (pencocokan), locate (pencarian), dan manipulasi teks. Dalam regex ada beberapa
+                    metakarakter untuk menyatakan bermacam-macam teks, contohnya yaitu ^ merupakan tanda awal string dan $ merupakan tanda akhir string. </p>
+
+            </div>
+        </section>
+
+        <section id="ilmu" class="ilmu">
+            <div class="container">
+                <div id="box-out" class="box ml-5 mr-5">
+                    <div data-aos="zoom-in" class="ml-3">
+                        <h3 class="text-left m-5">Context Free Grammars dalam Parsing</h3>
+
+                        <p class=" text-left ml-5 mr-5 ">
+                            Parsing adalah cara mendeskripsikan struktur kalimat. Ini merupakan hal yang penting ketika ita perlu memahami arti sebuah kalimat, seperti yang kita lakukan misalnya dalam menerjemahkan dari satu bahasa ke bahasa lain. Dalam ilmu komputer, ini relevan
+                            dalam interpreter, compiler, dan program penerjemahan lainnya.
+                        </p>
+
+                    </div>
+
+
+                    <div class="row  ml-5 mr-5 justify-content-center">
+
+                        <div class="col-lg-6 mt-5 mb-3">
+                            <div class="card text-center  mt-3  " data-aos="fade-up">
+                                <div class="card-header m-0" style="font-weight:600; font-size: 20px;">Grammar</div>
+                                <img style="width: 50%;" src="assets/img/validasi-uname.png" class="validasi-uname" alt="...">
+                                <div class="card-body">
+
+                                    <h5 class="text-left">Penjelasan</h5>
+                                    <p style="font-size:16px;" class="card-text"> Dari grammar diatas dapat dilihat ada beberapa aturan produksi. S -> &infinite; maksudnya nanti kita bisa mengubah Terminal menjadi sebuah string kosong. Lalu untuk i menggambarkan if dan e menggambarkan else. Contoh
+                                        parsing : <br>S -> SS <br> S -> iSS <br> S -> iiSeS <br> S -> iie </p>
+                                    <p style="font-size:16px;" class="card-text"> Jadi dari grammar tersebut salah satunya kita bisa mendapatkan string iie. </p>
+                                    <p style="font-size:16px;" class="card-text"> Dengan grammar diatas kita juga bisa mengecek apakah suatu string berasal dari grammar tersebut. Misalnya untuk string iieee. i pertama cocok dengan e pertama (dari sebelah kiri). Maka ini dihapus. Kemudian i kedua
+                                        cocok dengan e kedua (dari sebelah kiri). Maka ini juga dihapus. Tetapi masih tersisa 1 e, sedangkan i sudah tidak ada. Sehingga string iieee ini bukan merupakan language karena tidak sesuai dengan polanya. </p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-6 mt-5 mb-3">
+                            <div class="card text-center  mt-3  " data-aos="fade-up">
+                                <div class="card-header m-0" style="font-weight:600; font-size: 20px;">Programming</div>
+                                <img style="width: 50%;" src="assets/img/validasi-uname.png" class="validasi-uname" alt="...">
+                                <div class="card-body">
+
+                                    <h5 class="text-left">Penjelasan </h5>
+                                    <p style="font-size:16px;" class="card-text"> Hubungan dari pola grammar tersebut sesuai dengan pola if else pada C program. Dimana tidak boleh ada else yang lebih banyak dibanding if. Maksudnya if bisa muncul dengan else atau tidak, tetapi else hanya bisa ada
+                                        jika ada if. </p>
+                                    <p style="font-size:16px;" class="card-text"> Kita telah melakukan parsing dan mendapatkan string iie yang valid dari grammar yang ada di contoh. Lalu, gambar diatas adalah implementasi string iie dalam program C. Dari pencocokan string ini dapat membantu kita
+                                        dan compiler untuk mengetahui pasangan if dan else yang cocok. </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+
+                    <div data-aos="zoom-in" class="ml-3">
+                        <h3 class="text-left m-5">Markup Language</h3>
+
+                        <p class=" text-left ml-5 mr-5 ">
+                            Parsing adalah cara mendeskripsikan struktur kalimat. Ini merupakan hal yang penting ketika ita perlu memahami arti sebuah kalimat, seperti yang kita lakukan misalnya dalam menerjemahkan dari satu bahasa ke bahasa lain. Dalam ilmu komputer, ini relevan
+                            dalam interpreter, compiler, dan program penerjemahan lainnya.
+                        </p>
+
+                    </div>
+
+
+                    <div class="row  ml-5 mr-5 justify-content-center">
+
+                        <div class="col-lg-6 mt-5 mb-3">
+                            <div class="card text-center  mt-3  " data-aos="fade-up">
+                                <div class="card-header m-0" style="font-weight:600; font-size: 20px;">Grammar</div>
+                                <img style="width: 50%;" src="assets/img/validasi-uname.png" class="validasi-uname" alt="...">
+                                <div class="card-body">
+
+                                    <h5 class="text-left">Penjelasan</h5>
+                                    <p style="font-size:16px;" class="card-text"> Dari grammar diatas dapat dilihat ada beberapa aturan produksi. S -> &infinite; maksudnya nanti kita bisa mengubah Terminal menjadi sebuah string kosong. Lalu untuk i menggambarkan if dan e menggambarkan else. Contoh
+                                        parsing : <br>S -> SS <br> S -> iSS <br> S -> iiSeS <br> S -> iie </p>
+                                    <p style="font-size:16px;" class="card-text"> Jadi dari grammar tersebut salah satunya kita bisa mendapatkan string iie. </p>
+                                    <p style="font-size:16px;" class="card-text"> Dengan grammar diatas kita juga bisa mengecek apakah suatu string berasal dari grammar tersebut. Misalnya untuk string iieee. i pertama cocok dengan e pertama (dari sebelah kiri). Maka ini dihapus. Kemudian i kedua
+                                        cocok dengan e kedua (dari sebelah kiri). Maka ini juga dihapus. Tetapi masih tersisa 1 e, sedangkan i sudah tidak ada. Sehingga string iieee ini bukan merupakan language karena tidak sesuai dengan polanya. </p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-6 mt-5 mb-3">
+                            <div class="card text-center  mt-3  " data-aos="fade-up">
+                                <div class="card-header m-0" style="font-weight:600; font-size: 20px;">Programming</div>
+                                <img style="width: 50%;" src="assets/img/validasi-uname.png" class="validasi-uname" alt="...">
+                                <div class="card-body">
+
+                                    <h5 class="text-left">Penjelasan </h5>
+                                    <p style="font-size:16px;" class="card-text"> Hubungan dari pola grammar tersebut sesuai dengan pola if else pada C program. Dimana tidak boleh ada else yang lebih banyak dibanding if. Maksudnya if bisa muncul dengan else atau tidak, tetapi else hanya bisa ada
+                                        jika ada if. </p>
+                                    <p style="font-size:16px;" class="card-text"> Kita telah melakukan parsing dan mendapatkan string iie yang valid dari grammar yang ada di contoh. Lalu, gambar diatas adalah implementasi string iie dalam program C. Dari pencocokan string ini dapat membantu kita
+                                        dan compiler untuk mengetahui pasangan if dan else yang cocok. </p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+
+
+
+
+
+                    <h4 class="text-center mt-5 " style="font-style:italic" data-aos="ease-in">Kesimpulan</h4>
+                    <p class="mr-5 ml-5 mb-5 text-center" style="font-style:italic" data-aos="fade-up">Regular Expresion adalah sebuah teks berbentuk pola dan banyak dipakai dalam pencocokan seperti validasi email maupun pencarian seperti dalam search di linux/unix.
+                    </p>
+
+                </div>
+
+                <div id="box-out" class="box mt-5 ml-5 mr-5">
+                    <h3 class="m-5" data-aos="fade-up">Referensi</h3>
+
+                    <p class="ml-5 mr-5 mb-5" data-aos="fade-up"> https://code.tutsplus.com/id/tutorials/8-regular-expressions-you-should-know--net-6149</p>
+                    <p class="ml-5 mr-5 mb-5" data-aos="fade-up"> https://www.freecodecamp.org/news/grep-command-tutorial-how-to-search-for-a-file-in-linux-and-unix/</p>
+                </div>
+            </div>
+        </section>
+        <hr>
+
+
+    </main>
+
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="text-center">
+                    <h5>Rofifah Nurul Annisa | D121181508 | Kelas A </h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="container footer-bottom clearfix">
+            <div class="text-center">
+                <div style="margin-bottom: 1%;">
+                    <a href="mailto:rofifahnurul00@gmail.com"> <img src="assets/img/gmail.png" class="gmail" alt="Gmail"></a>
+                    <a href="https://www.linkedin.com/in/rofifah-nurul-annisa-1608"><img src="assets/img/linkedln.png" class="linkedln" alt="linkedln"></a>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+    <a href="# " class="back-to-top ">back to top</a>
+
+    <script src="assets/js-tambahan/jquery/jquery.min.js "></script>
+    <script src="assets/js-tambahan/bootstrap/js/bootstrap.bundle.min.js "></script>
+    <script src="assets/js-tambahan/jquery.easing/jquery.easing.min.js "></script>
+    <script src="assets/js-tambahan/jquery-sticky/jquery.sticky.js "></script>
+    <script src="assets/js-tambahan/venobox/venobox.min.js "></script>
+    <script src="assets/js-tambahan/waypoints/jquery.waypoints.min.js "></script>
+    <script src="assets/js-tambahan/counterup/counterup.min.js "></script>
+    <script src="assets/js-tambahan/isotope-layout/isotope.pkgd.min.js "></script>
+    <script src="assets/js-tambahan/aos/aos.js "></script>
+    <script src="assets/js/main.js "></script>
+
+
+</body>
+
+</html
