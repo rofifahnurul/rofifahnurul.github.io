@@ -50,10 +50,13 @@
 
                 <h3 class="text-center m-5" style="font-weight:600" data-aos="fade-up">Apa itu <span>Hirarki Chomski ?</span></h3>
                 <p class="section-title text-left m-5" data-aos="fade-up">
-                    Chomsky Hirarki merupakan penggolongan tingkatan bahasa menjadi 4 yang dilakukan oleh Noam Chomsky pada tahun 1959. Karena hirarki chomsky ini merupakan penggolongan tingkatan bahasa, maka perlu juga diketahui terlebih dahulu mengenai grammar. <br>                    Grammar dari suatu bahasa yaitu G = (V, T, P, S)<br> Dimana V merupakan himpunan simbol non terminal (variabel). Simbol non terminal ini digunakan untuk mendeskripsikan suatu kalimat dan dapat diturunkan menjadi simbol terminal. Biasanya
-                    dilambangkan dengan huruf besar. <br> Selanjutnya, T, merupakan himpunan simbol terminal. Simbol terminal merupakan simbol yang tidak dapat lagi diuraikan dan biasa dilambangkan dengan huruf kecil atau angka.
+                    Chomsky Hirarki merupakan penggolongan tingkatan bahasa menjadi 4 yang dilakukan oleh Noam Chomsky pada tahun 1959. Karena hirarki chomsky ini merupakan penggolongan tingkatan bahasa, maka perlu juga diketahui terlebih dahulu mengenai grammar. <br>                    <br> Grammar dari suatu bahasa yaitu G = (V, T, P, S)<br> Dimana V merupakan himpunan simbol non terminal (variabel). Simbol non terminal ini digunakan untuk mendeskripsikan suatu kalimat dan dapat diturunkan menjadi simbol terminal.
+                    Biasanya dilambangkan dengan huruf besar. <br> Selanjutnya, T, merupakan himpunan simbol terminal. Simbol terminal merupakan simbol yang tidak dapat lagi diuraikan dan biasa dilambangkan dengan huruf kecil atau angka.
                     <br> Kemudian ada P yang merupakan himpunan aturan produksi. Setiap aturan ditulis dalam bentuk : &alpha; &#8594; &beta;. Ini artinya simbol yang di ruas kiri dapat menghasilkan simbol di ruas kanan. <br> Terakhir, S, merupakan simbol
-                    awal dan biasa dinotasikan dengan S.
+                    awal dan biasa dinotasikan dengan S. <br><br>
+
+
+
             </div>
         </section>
 
@@ -63,14 +66,14 @@
                     <div data-aos="zoom-in" class="ml-3">
                         <h3 class="text-left m-5">Klasifikasi menurut Chomsky </h3>
 
-                        <p class=" text-left ml-5 mr-5 ">
+                        <p class=" text-left ml-5 mr-5 mb-5 ">
                             Pengklasifikasian bahasa menjadi 4 oleh Chomsky dapat dilihat sebagai berikut :
                         </p>
 
                     </div>
 
 
-                    <div class="row  ml-5 mr-5 justify-content-center">
+                    <div data-aos="fade-up" class="row  ml-5 mr-5 justify-content-center">
 
                         <table class="table table-hover table-bordered ">
                             <thead>
@@ -190,11 +193,26 @@
                         </div>
                     </div>
 
+                    <div data-aos="zoom-in" class="ml-3">
+                        <h3 class="text-left m-5">Apa hubungan Hirarki Chomsky dengan grammar ?</h3>
 
+                        <p class=" text-left ml-5 mr-5 ">
+                            Dengan adanya pengklasifikasian hirarki chomsky, kita bisa menganalisis bahasa atau mesin automatanya dilihat dari aturan produksinya. Misalnya suatu grammar memiliki aturan produksi sebagai berikut <br> 1. A &#8594; iieeS<br>                            2. eS &#8594; iie<br> Nah, dari 2 aturan produksi tersebut kita bisa menganalisis sebagai berikut : <br>
+                            <ol class=" text-left ml-5 mr-5 " type="a">
+                                <li>Aturan produksi pertama ruas sebelah kirinya hanya terdiri dari 1 simbol variabel. Lalu ruas kanannya terdiri dari terminal dan variabel. Sedangkan variabelnya hanya 1 dan berada di sebelah paling kanan. Maka untuk aturan
+                                    produksi ini kita bisa menganalisis kemungkinannya bahwa ini bisa masuk di tipe 0, 1, 2, 3</li>
+                                <li>Aturan produksi kedua, panjang string di sebelah kiri ada 2 dan di ruas kanan ada 3. Maka ini tidak mungkin tipe 2 atau tipe 3. Karena di tipe 2 dan 3, &alpha; hanya terdiri dari 1 variabel. Jadi kemungkinannya tipe 0 atau
+                                    1. </li>
+                            </ol>
+                            <p class=" text-left ml-5 mr-5 "> Dari analisis kedua aturan produksinya, maka dapat disimpulkan grammar tersebut kemungkinannya bertipe 1 (Context-Sensitive) atau tipe 0 (Unrestricted)
+                            </p>
+
+                    </div>
 
 
                     <h4 class="text-center mt-5 " style="font-style:italic " data-aos="ease-in ">Kesimpulan</h4>
-                    <p class="mr-5 ml-5 mb-5 text-center " style="font-style:italic " data-aos="fade-up ">Dalam hirarky chomsky, tipe 3 mempunyai batasan yang lebih banyak diikuti tipe 2 lalu tipe 1 dan terakhir tipe 0 yang tidak memiliki batasan dalam aturan produksinya. Jadi semakin tipenya tinggi maka batasannya semakin bertambah.
+                    <p class="mr-5 ml-5 mb-5 text-center " style="font-style:italic " data-aos="fade-up ">Dalam hirarky chomsky, tipe 3 mempunyai batasan yang lebih banyak diikuti tipe 2 lalu tipe 1 dan terakhir tipe 0 yang tidak memiliki batasan dalam aturan produksinya. Jadi semakin tipenya tinggi maka batasannya semakin bertambah. Hirarki
+                        Chomsky dapat membantu dalam menganalisis bahasa yang digunakan grammar.
                     </p>
 
                 </div>
