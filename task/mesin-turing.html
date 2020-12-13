@@ -55,11 +55,11 @@
                         <p class="text-left" data-aos="fade-up">
                             Mesin Turing adalah sebuah finte automaton yang memiliki sebuah tape tunggal dengan panjang tak terhingga yang dapat membaca dan menulis data. Mesin Turing ini awalnya diusulkan oleh Alan Turing, seorang matematikawan Inggris sebagai model matematis sederhana
                             sebuah komputer pada tahun 1936. Mesin Turing dapat berperan sebagai mesin pengenal bahasa formal. Bahasa yang dapat dikenali Mesin Turing yaitu Unrestricted (bahasa tanpa batasan aturan produksi).</p>
-                        <img class="mt-3 mb-3 mx-auto" style="width: 30%;" src="assets/img/" alt="...">
+                        <img class="mt-3 mb-3 mx-auto" style="width: 80%;" src="assets/img/mesin-turing.png" alt="...">
                         <p class="text-left" data-aos="fade-up">
                             Seperti yang bisa dilihat pada gambar diatas, Mesin Turing memiliki beberapa komponen yaitu :
-                            <ol type="a">
-                                <li>Finite Control (Pengendali berhingga)</li>
+                            <ol type="a" style="color:#524f4f ;font-size:18px;">
+                                <li>Finite Control (Pengendali berhingga) merupakan otam dari Mesin Turing diimplementasikan dari algoritma pengenalan kalimat</li>
                                 <li>Tape yang memiliki karakteristik :
                                     <ul>
                                         <li>Tape input panjangnya tak berhingga. Dapat dilihat pada gambar diatas dimulai dari ... sampai ... (tak berhingga)</li>
@@ -71,6 +71,7 @@
                             </ol>
                         </p>
                     </div>
+                    <br>
                     <div data-aos="zoom-in" class="m-5">
                         <h3 class="text-left" style="font-weight:600" data-aos="fade-up">Bagaimana Mesin Turing dilambangkan dalam notasi formal ?</h3>
                         <p class="text-left" data-aos="fade-up">
@@ -116,7 +117,7 @@
                     <div data-aos="zoom-in" class="m-5">
                         <h3 class="text-left" style="font-weight:600" data-aos="fade-up">Bagaimana Prinsip/Cara Kerja Mesin Turing ?</h3>
                         <p class="text-left" data-aos="fade-up">Prinsip kerja mesin turing yaitu : </p>
-                        <table class="table table-hover table-borderless">
+                        <table class="table table-hover table-borderless" style="color:#524f4f ;font-size:18px;">
                             <thead>
 
                             </thead>
@@ -145,117 +146,107 @@
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
+                    <br>
+                    <div data-aos="zoom-in" class="m-5">
+                        <h3 class="text-left" style="font-weight:600" data-aos="fade-up">Contoh Soal Mesin Turing</h3>
+                        <p class="text-left" data-aos="fade-up"> Misalkan dalam Mesin Turing terdapat : <br> Q = {q1,q2} <br> &sigma; = {a,b} <br> &Gamma; = {a,b,b} <br> F = {q2} <br> S = {q1}
 
+                        </p>
+                        <br>
+                        <p>Fungsi Transisinya : <br>
+                            <em> Ket : Pergerakan mesin turing : R (right) atau L (Left) </em></p>
+                        <ol type="a" style="color:#524f4f ;font-size:18px;">
+                            <li>&delta; (q1,a) = (q1,a,R) <br> pada state q1, head menunjuk karakter ‘a’ pada pita, menjadi state q1, head bergerak ke kanan</li>
+                            <li>&delta; (q1,b) = (q1,a,R) <br> pada state q1, head menunjuk karakter ‘b’ pada pita, menjadi state q1, headmenulis karakter ‘a’ lalu bergerak ke kanan</li>
+                            <li>&delta; (q1, b ) = (q2, b ,L) <br> pada state q1, head menunjuk karakter ‘ b ’ pada pita menjadi state q2,head bergerak ke kiri</li>
 
+                        </ol>
 
+                        <p>Jadi, berdasarkan fungsi transisi diatas, jika input yang dimasukkan yaitu "abbaa", maka Mesin Turing akan beroperasi sebagai berikut : </p>
+                        <div class="row  ">
 
-
-
-
-
-
-
-
-
-
-                        <div class="row  ml-5 mr-5 justify-content-center">
-
-                            <div class="col-lg-6 mt-5 mb-3">
+                            <div class="col-6 mt-5 mb-3">
                                 <div class="card text-center  mt-3  " data-aos="fade-up">
-                                    <div class="card-header m-0" style="font-weight:600; font-size: 20px;">Grammar</div>
-                                    <img class="mt-3 mb-3 mx-auto" style="width: 70%;" src="assets/img/grammar.png" alt="...">
+                                    <div class="card-header m-0" style="font-weight:600; font-size: 20px;">01</div>
+                                    <img class="mt-3 mb-3 mx-auto" style="width: 90%;" src="assets/img/satu.png" alt="...">
 
                                     <div class="card-body">
-                                        <h5 class="text-left">Penjelasan</h5>
-                                        <p style="font-size:16px;" class="card-text"> Dari grammar diatas dapat dilihat ada beberapa aturan produksi. S -> &epsilon; maksudnya nanti kita bisa mengubah Terminal menjadi sebuah string kosong. Lalu untuk i menggambarkan if dan e menggambarkan else. Berikut
-                                            contohnya jika kita menurunkan dari aturan produksi grammar diatas :
+
+                                        <p style="font-size:16px;" class="card-text">Sesuai prinsip kerja, dimulai dengan Head berada di posisi awal pada state q1
                                         </p>
 
-                                        <p style="font-size:16px;" class="card-text"> Jadi dari grammar tersebut kita bisa mendapatkan string <em style="font-weight: bold;">iie</em>. </p><br>
-                                        <p style="font-size:16px;" class="card-text"> Dengan grammar diatas kita juga bisa mengecek apakah suatu string berasal dari grammar tersebut. Misalnya untuk string iieee. i pertama cocok dengan e pertama (dari sebelah kiri). Maka ini dihapus. Kemudian i kedua
-                                            cocok dengan e kedua (dari sebelah kiri). Maka ini juga dihapus. Tetapi masih tersisa 1 e, sedangkan i sudah tidak ada. Sehingga string iieee ini bukan merupakan language karena tidak sesuai dengan polanya.
-                                        </p>
                                     </div>
                                 </div>
 
                             </div>
-                            <div class="col-lg-6 mt-5 mb-3">
+                            <div class="col-6 mt-5 mb-3">
                                 <div class="card text-center  mt-3  " data-aos="fade-up">
-                                    <div class="card-header m-0" style="font-weight:600; font-size: 20px;">Contoh</div>
-                                    <img class="mt-3 mb-3 mx-auto" style="width: 70%;" src="assets/img/if-else.png" alt="...">
+                                    <div class="card-header m-0" style="font-weight:600; font-size: 20px;">02</div>
+                                    <img class="mt-3 mb-0 mx-auto" style="width: 90%;" src="assets/img/dua.png" alt="...">
                                     <div class="card-body">
+                                        <p style="font-size:16px;" class="card-text mb-0"> Berdasarkan fungsi transisi a, Head bergerak ke kanan </p> <br>
 
-                                        <h5 class="text-left">Penjelasan </h5>
-                                        <p style="font-size:16px;" class="card-text"> Hubungan dari pola grammar tersebut sesuai dengan pola if else pada C program. Dimana tidak boleh ada else yang lebih banyak dibanding if. Maksudnya if bisa muncul dengan else atau tidak, tetapi else hanya bisa
-                                            ada jika ada if. </p> <br>
-                                        <p style="font-size:16px;" class="card-text"> Kita telah melakukan parsing dan mendapatkan string iie yang valid dari grammar yang ada di contoh. Lalu, gambar diatas adalah implementasi string iie dalam program C. Dari pencocokan string ini dapat membantu kita
-                                            dan compiler untuk mengetahui pasangan if dan else yang cocok. </p>
                                     </div>
                                 </div>
                             </div>
-
-
-
-
-                        </div>
-
-                        <div data-aos="zoom-in" class="ml-3">
-                            <h3 class="text-left m-5">Context Free Grammar dalam Markup Language</h3>
-
-                            <p class=" text-left ml-5 mr-5 ">
-                                String dalam markup language adalah dokumen dengan penanda (biasa disebut tag). Tag ini menandakan semantik dari variasi string dalam document. Markup Language yang familiar diketahui yaitu HTML (Hypertext Markup Language). Di dalam html ada berbagai
-                                tag yang digunakan sesuai kebutuhan kita. Misalnya tag p untuk membuat paragraf, tag ol untuk membuat list berurutan, tag li untuk membuat list dan tag em untuk membuat teks memiliki style italic.
-                            </p>
-
-                        </div>
-
-
-                        <div class="row  ml-5 mr-5 justify-content-center">
-
-                            <div class="col-lg-12 mt-5 mb-3">
+                            <div class="col-6 mt-2 mb-3">
                                 <div class="card text-center  mt-3  " data-aos="fade-up">
-                                    <div class="card-header m-0" style="font-weight:600; font-size: 20px;">Variabel dalam HTML</div>
-
+                                    <div class="card-header m-0" style="font-weight:600; font-size: 20px;">03</div>
+                                    <img class="mt-3 mb-0 mx-auto" style="width: 90%;" src="assets/img/tiga.png" alt="...">
                                     <div class="card-body">
-                                        <ol type="a">
-                                            <li class="text-left" style="font-size:16px;">Text adalah string karakter apa pun yang dapat ditafsirkan secara harfiah, yaitu tidak memiliki tag</li>
-                                            <li class="text-left" style="font-size:16px;">Char adalah string apa pun yang terdiri dari satu karakter yang legal dalam teks HTML. </li>
-                                            <li class="text-left" style="font-size:16px;">Doc merepresentasikan documents, yang merupakan urutan-urutan dari elemen </li>
-                                            <li class="text-left" style="font-size:16px;"> Elemen adalah salah satu string Text, atau sepasang tag yang cocok dan dokumen di antara keduanya, atau tag yang tidak cocok diikuti dengan dokumen </li>
-                                            <li class="text-left" style="font-size:16px;">List item adalah tag li diikuti dengan dokumen, yang merupakan item daftar tunggal.</li>
-                                            <li class="text-left" style="font-size:16px;">List adalah urutan dari beberapa list item</li>
-                                        </ol>
+                                        <p style="font-size:16px;" class="card-text mb-0"> Berdasarkan fungsi transisi b, b diganti a dan head bergerak ke kanan</p> <br>
 
                                     </div>
                                 </div>
-
                             </div>
-                        </div>
-                        <div class="row  ml-5 mr-5 justify-content-center">
-                            <div class="col-lg-12 mt-5 mb-3">
-                                <div class="card text-center  mt-3" data-aos="fade-up">
-                                    <div class="card-header m-0" style="font-weight:600; font-size: 20px;">CFG dan HTML</div>
-                                    <img class="mt-3 mb-3 mx-auto" style="width: 40%;" src="assets/img/context.png" alt="...">
+                            <div class="col-6 mt-2 mb-3">
+                                <div class="card text-center  mt-3  " data-aos="fade-up">
+                                    <div class="card-header m-0" style="font-weight:600; font-size: 20px;">04</div>
+                                    <img class="mt-3 mb-0 mx-auto" style="width: 90%;" src="assets/img/empat.png" alt="...">
                                     <div class="card-body">
+                                        <p style="font-size:16px;" class="card-text mb-0">Berdasarkan fungsi transisi b, b diganti a dan head bergerak ke kanan</p> <br>
 
-                                        <h5 class="text-left">Penjelasan </h5>
-                                        <p style="font-size:16px;" class="card-text">Pada no. 1 artinya char (character) bisa termasuk a, A dan sebagainya. Pada no.6 artinya list bisa kosong atau list dari list item.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 mt-2 mb-3">
+                                <div class="card text-center  mt-3  " data-aos="fade-up">
+                                    <div class="card-header m-0" style="font-weight:600; font-size: 20px;">05</div>
+                                    <img class="mt-3 mb-0 mx-auto" style="width: 90%;" src="assets/img/lima.png" alt="...">
+                                    <div class="card-body">
+                                        <p style="font-size:16px;" class="card-text mb-0"> Berdasarkan fungsi transisi a, Head bergerak ke kanan </p> <br>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 mt-2 mb-3">
+                                <div class="card text-center  mt-3  " data-aos="fade-up">
+                                    <div class="card-header m-0" style="font-weight:600; font-size: 20px;">06</div>
+                                    <img class="mt-3 mb-0 mx-auto" style="width: 90%;" src="assets/img/enam.png" alt="...">
+                                    <div class="card-body">
+                                        <p style="font-size:16px;" class="card-text mb-0"> Berdasarkan fungsi transisi a, Head bergerak ke kanan dan menunjuk b karena yang kosong ditulis b</p> <br>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 mt-2 mb-3">
+                                <div class="card text-center  mt-3  " data-aos="fade-up">
+                                    <div class="card-header m-0" style="font-weight:600; font-size: 20px;">07</div>
+                                    <img class="mt-3 mb-0 mx-auto" style="width: 90%;" src="assets/img/tujuh.png" alt="...">
+                                    <div class="card-body">
+                                        <p style="font-size:16px;" class="card-text mb-0"> Berdasarkan fungsi transisi c, Head bergerak ke kiri dan statenya q2 dan tidak ada lagi transisi dari state q2 sehingga mesin turing berhenti. Karena mesin berhenti di state akhir (q2) maka input abbaa <span style="font-style:bold">diterima</span></p>
                                         <br>
-                                        <p style="font-size:16px;" class="card-text"> Beberapa aspek HTML sebenarnya tidak butuh menggunakan context-free-grammar; karena dengan regular expression sudah cukup. Misalnya, nomor 1 dan 2 dari gambar diatas, cukup katakan bahwa Text merepresentasikan bahasa
-                                            yang sama seperti halnya ekspresi reguler (a + A +). Namun, beberapa aspek HTML lainnya memang membutuhkan context free grammar. Misalnya, setiap pasangan tag yang merupakan pasangan awal dan akhir yang sesuai,
-                                            contohnya seperti tag em yang harus ditutup, sama seperti () atau {} yang harus seimbang.</p>
 
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-
-
 
 
                         <h4 class="text-center mt-5 " style="font-style:italic" data-aos="ease-in">Kesimpulan</h4>
-                        <p class="mr-5 ml-5 mb-5 text-center" style="font-style:italic" data-aos="fade-up">Pengaplikasian context free grammar bisa ditemukan pada parsing seperti penggunaan if else di program C dan juga pada markup language seperti html
+                        <p class="mr-5 ml-5 mb-5 text-center" style="font-style:italic" data-aos="fade-up">Walaupun mesin turing merupakan model yang sangat sederhana dari komputer, tetapi memiliki kemampuan menggambarkan perilaku komputer secara umum. Mesin Turing terdiri dari 2 komponen yaitu tape dan finite state control. Tape head
+                            dalam mesin turing dapat digerakkan dengan fungsi transisi.
                         </p>
 
                     </div>
@@ -303,4 +294,4 @@
 
 </body>
 
-</html
+</html>
