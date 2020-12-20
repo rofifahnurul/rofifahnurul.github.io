@@ -1,0 +1,79 @@
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+
+#jumbotron {
+    width: 100%;
+    height: 100vh;
+    background: ;
+    background-size: cover;
+    position: relative;
+}
+
+#jumbotron .jumbotron-container {
+    position: absolute;
+    bottom: 0;
+    top: 5;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+}
+
+#jumbotron h1 {
+    margin: 0 0 20px 0;
+    font-size: 44px;
+    font-weight: 500;
+    line-height: 56px;
+    background-image: linear-gradient(to right, #DDDAB7, #E8E5D8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+#jumbotron .btn {
+    align-items: right;
+    background: linear-gradient(#4B3B24, #49251D);
+    width: max-content;
+    font-family: "Raleway", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding: 18px 32px;
+    border-radius: 25px;
+    transition: 0.5s;
+    margin: 10px;
+    color: #E8E5D8;
+}
+
+#jumbotron .jumbotron-container .profil-img {
+    align-content: flex-start;
+}
+
+#hero .btn-get-started:hover {
+    background: #a59e8c;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    height: 65px;
+    width: 100%;
+}
+
+.navbar-collapse {
+    padding-top: 40px;
+}
+
+.navbar-brand {
+    padding-left: 40px;
+}
+
+main {
+    background-color: #E8E5D8;
+}
+
+.container {
+    margin: auto;
+}
