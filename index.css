@@ -20,7 +20,9 @@
 # Hero Section
 --------------------------------------------------------------*/
     
-    .jumbotron {}
+    .jumbotron {
+        background-color: white;
+    }
     
     .jumbotron .row .col {
         flex: 50%;
@@ -38,10 +40,10 @@
 --------------------------------------------------------------*/
     
     #pl .card {
-        flex: 30%;
-        max-width: 30%;
-        margin: 8px;
+        flex: 25%;
+        max-width: 22%;
         border-radius: 15px;
+        margin: 2px 2px;
     }
     
     #pl .card-img-top {
@@ -73,7 +75,18 @@
         }
         #pl .card-img-top {
             width: 25%;
-            height: 30%;
+            height: 35%;
+        }
+    }
+    /*--------------------------------------------------------------
+# Article Section
+--------------------------------------------------------------*/
+    
+    @media (max-width:900px) {
+        #article .col {
+            flex: 100%;
+            max-width: 90%;
+            margin: 8px auto;
         }
     }
     /*--------------------------------------------------------------
@@ -81,7 +94,6 @@
 --------------------------------------------------------------*/
     
     footer {
-        width: 100%;
         height: 25vh;
         background-color: #E8E5D8;
     }
