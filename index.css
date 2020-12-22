@@ -1,3 +1,8 @@
+section {
+    margin: 20px auto;
+}
+
+
 /*--------------------------------------------------------------
 # Navbar
 --------------------------------------------------------------*/
@@ -14,6 +19,8 @@
 # Hero Section
 --------------------------------------------------------------*/
 
+.jumbotron {}
+
 .jumbotron .row .col {
     flex: 50%;
     max-width: 50%;
@@ -23,5 +30,46 @@
     .jumbotron .row .col {
         flex: 100%;
         max-width: 100%
+    }
+}
+
+
+/*--------------------------------------------------------------
+# Programming Language Section
+--------------------------------------------------------------*/
+
+#pl .card {
+    flex: 30%;
+    max-width: 30%;
+    margin: 8px;
+    border-radius: 15px;
+}
+
+#pl .card-img-top {
+    width: 50%;
+    height: 50%;
+}
+
+#pl .card-title {
+    text-align: center;
+}
+
+@media (max-width:1000px) {
+    #pl .card {
+        flex: 50%;
+        max-width: 40%;
+        margin: 8px auto;
+    }
+}
+
+@media (max-width:700px) {
+    #pl .card {
+        flex: 100%;
+        max-width: 90%;
+        margin: 8px auto;
+    }
+    #pl .card-img-top {
+        width: 30%;
+        height: 30%;
     }
 }
