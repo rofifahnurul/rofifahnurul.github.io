@@ -10,6 +10,11 @@
 # Navbar
 --------------------------------------------------------------*/
     
+    .navbar {
+        background-color: #E8E5D8;
+        color: black;
+    }
+    
     .navbar .container-fluid {
         margin-top: 0.5%;
         margin-left: 3%;

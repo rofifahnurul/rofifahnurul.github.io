@@ -1,8 +1,13 @@
-.container {
+#about .container {
     margin-top: 50px;
     padding-top: 50px;
 }
 
 .card {
     max-width: 900px;
+}
+
+.bold {
+    font-weight: bold;
+    color: black;
 }
