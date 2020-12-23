@@ -3,3 +3,13 @@
     height: 85vh;
     margin-top: 20px;
 }
+
+#list-article {
+    max-width: 80%;
+    border: 0px solid rgb(122, 122, 122);
+    border-radius: 10px;
+}
+
+#list-article .card {
+    margin: 10px 10px 10px 10px;
+}
