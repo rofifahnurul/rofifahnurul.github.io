@@ -8,7 +8,12 @@
     }
     
     main {
-        background-color: rgb(32, 28, 28);
+        background-color: #32312F;
+        color: #E8E5D8;
+    }
+    
+    p {
+        letter-spacing: 2px;
     }
     /*--------------------------------------------------------------
 # Navbar
@@ -30,7 +35,8 @@
 --------------------------------------------------------------*/
     
     .jumbotron {
-        background-color: rgb(32, 28, 28);
+        background-color: #32312F;
+        margin: auto 5%;
     }
     
     .jumbotron .row .col {
