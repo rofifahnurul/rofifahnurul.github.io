@@ -1,5 +1,5 @@
     section {
-        margin: 20px auto;
+        margin: 50px auto;
     }
     
     .section-title {
@@ -12,8 +12,9 @@
         color: #E8E5D8;
     }
     
-    p {
-        letter-spacing: 2px;
+    section p {
+        font-size: 18px;
+        line-height: 200%;
     }
     /*--------------------------------------------------------------
 # Navbar
@@ -37,6 +38,7 @@
     .jumbotron {
         background-color: #32312F;
         margin: auto 5%;
+        height: 750px;
     }
     
     .jumbotron .row .col {
